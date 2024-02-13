@@ -1,9 +1,31 @@
+/* Declaration des variables */
+@media (prefers-color-scheme: dark) {
+/* CSS propre au mode sombre */
+  :root {
+    --color-foreground: #282c34;
+    --color-background: #282c34;
+    --color-background-alt: #282c34;
+    --color-accent: #61dafb;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+/* CSS propre au mode clair */
+  :root {
+    --color-foreground: #dadada;
+    --color-background: #dadada;
+    --color-background-alt: #dadada;
+    --color-accent: #2e2e2e;
+  }
+}
+
+
 .App {
   text-align: center;
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 10vmin;
   pointer-events: none;
 }
 
@@ -14,7 +36,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: var(--color-foreground);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -25,7 +47,7 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: var(--color-accent);
 }
 
 @keyframes App-logo-spin {
