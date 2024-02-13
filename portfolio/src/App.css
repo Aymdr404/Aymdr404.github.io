@@ -1,24 +1,19 @@
 /* Declaration des variables */
-@media (prefers-color-scheme: dark) {
-/* CSS propre au mode sombre */
-  :root {
-    --color-foreground: #282c34;
-    --color-background: #282c34;
-    --color-background-alt: #282c34;
-    --color-accent: #61dafb;
-  }
+[data-theme="dark"]{
+  --color-foreground: #282c34;
+  --color-background: #282c34;
+  --color-accent: #61dafb;
+  --color-text: #ffffff;
+  --color-text-secondary: #ffffff;
 }
 
-@media (prefers-color-scheme: light) {
-/* CSS propre au mode clair */
-  :root {
-    --color-foreground: #dadada;
-    --color-background: #dadada;
-    --color-background-alt: #dadada;
-    --color-accent: #2e2e2e;
-  }
+[data-theme="light"]{
+  --color-foreground: #ffffff;
+  --color-background: #ffffff;
+  --color-accent: #61dafb;
+  --color-text: #282c34;
+  --color-text-secondary: #282c34;
 }
-
 
 .App {
   text-align: center;

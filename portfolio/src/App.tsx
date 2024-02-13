@@ -1,20 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useContext } from 'react';
+import { DarkModeContext } from './context/DarkModeContext';
+import { Routes, Route } from 'react-router-dom';
+
+import Home from './Home/home';
+import About from './About/about';
 import Navbar from './navbar/navbar';
 
+import './App.css';
+import logo from './logo.svg';
+
 function App() {
+  const darkMode = useContext(DarkModeContext);
+  localStorage.setItem("darkmode", darkMode.toString());
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <Navbar />  
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-          Learn React
-      </header>
-    </div>
+      <div className="App" data-theme={darkMode ? "dark" : "light"}>
+        <header className="App-header">
+          <Navbar />  
+          <img src={logo} className="App-logo" alt="logo" />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/About-me" element={<About />} />
+          </Routes>
+        </header>
+      </div>
   );
 }
 
