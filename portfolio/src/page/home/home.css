@@ -1,0 +1,9 @@
+body {
+    margin: 0 !important;
+    background-color: #22223a;
+    font-family: Poppins, sans-serif !important;
+}
+
+.route-content{
+    margin-top: 2%;
+}
