@@ -1,3 +1,6 @@
+body{
+  overflow: hidden;
+}
 
 .accueil {
   text-align: center;
@@ -19,13 +22,20 @@ video {
   padding-top: 2%;
   border-radius: 20% 20% 0% 0%;
   width: 100%;
-  height: 100vh;
+  height: 90vh;
   border: 5px solid var(--color-accent);
   transition: 0.3s;
-  background-color: rgba(73, 73, 73, 0.5);
+  background-color: rgba(73, 73, 73, 0.6);
 }
 
-img {
+.info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.info img {
   object-fit: cover;
   border-radius: 20% 20% 20% 20%;
 }
