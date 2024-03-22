@@ -5,7 +5,7 @@ import './accordeonPro.css'
 
 const AccordeonPro: React.FC = () => {
     return(
-        <Accordion activeIndex={0}>
+        <Accordion>
             <AccordionTab header="Langages front">
               <div className="front accordion">
                 <section className="text">

@@ -9,24 +9,27 @@ const Acceuil: React.FC = () => {
   return (
     <div className="accueil">
       <div className="contenu">
-        <div className="arrondi">
+        <section className="arrondi">
           <h2>Bonjour ici Sabatier Aymeric</h2>
-        </div>
-        <div className="info">
+        </section>
+        <section className="info">
             <div>
               <h3>Developpeur Backend</h3>
               <p>Je suis un nouveau développeur Back End. Je suis actuelement en alternance chez Opjectif-PI, en effectuant ma formation dans le BUT informatique de grenoble.</p>
             </div>
             <img src="https://www.w3schools.com/w3images/avatar_g2.jpg" alt="avatar" />
-        </div>
-        <div className="info_personnel">
+        </section>
+        <section className="info_personnel">
           <h2>Parlons de moi</h2>
           <AccordeonPerso />
-        </div>
-        <div className="info_professionnel">
-          <h2>Parlons proggramation maintenant</h2>
+        </section>
+        <section className="info_professionnel">
+          <h2>Parlons programmation maintenant</h2>
           <AccordeonPro />
-        </div>
+        </section>
+        <section className="info_project">
+          <h2>Mes projets</h2>
+        </section>
       </div>
     </div>
   );

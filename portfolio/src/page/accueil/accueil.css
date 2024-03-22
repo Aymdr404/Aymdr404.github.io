@@ -28,7 +28,7 @@ body{
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  margin: 5%;
+  margin-top: 5%;
 }
 
 .info img {
@@ -36,9 +36,10 @@ body{
   border-radius: 20%;
 }
 
-.info_personnel, .info_professionnel {
+.info_personnel, .info_professionnel, .info_project {
   max-width: 50%;
   margin-left: 5%;
+  margin-top: 10%;
 
   img {
     object-fit: cover;

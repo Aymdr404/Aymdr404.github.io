@@ -4,7 +4,7 @@ import './accordeonPerso.css'
 
 const AccordeonPerso: React.FC = () => {
     return(
-      <Accordion activeIndex={0}>
+      <Accordion >
         <AccordionTab header="Mon coté sportif">
           <div className="sport accordion">
             <section className="text">
