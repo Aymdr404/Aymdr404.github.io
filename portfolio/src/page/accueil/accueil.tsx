@@ -20,6 +20,7 @@ const Acceuil: React.FC = () => {
             <img src="https://www.w3schools.com/w3images/avatar_g2.jpg" alt="avatar" />
         </div>
         <div className="info_personnel">
+          <h2>Parlons de moi</h2>
           <AccordeonPerso />
         </div>
         <div className="info_professionnel">

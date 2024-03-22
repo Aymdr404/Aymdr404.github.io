@@ -1,0 +1,6 @@
+.card{
+    position: fixed;
+    top: 92%;
+    left: 95%;
+    z-index: 1000;
+}

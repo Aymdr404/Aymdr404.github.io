@@ -10,6 +10,7 @@ body{
 
 .contenu {
   margin-top: 5%;
+  padding-bottom: 5%;
   background-color: rgba(73, 73, 73, 0.6);
   border-radius: 20% 20% 0% 0%;
   width: 100%;
@@ -52,6 +53,10 @@ body{
     width: 300px;
     margin-left: 15px;
   }
+}
+
+.info_professionnel{
+  margin-left: 45%;
 }
 
 .accordion {
