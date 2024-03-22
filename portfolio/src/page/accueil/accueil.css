@@ -1,31 +1,25 @@
 body{
-  overflow: hidden;
-}
+  /* overflow: hidden; */
+  color : #ffffff;
+} 
 
 .accueil {
   text-align: center;
-  color : #f8f8f2;
+  color : #ffffff;
 }
 
-video {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-  z-index: -1;
-  object-fit: cover;
+.contenu {
+  margin-top: 5%;
+  background-color: rgba(73, 73, 73, 0.6);
+  border-radius: 20% 20% 0% 0%;
+  width: 100%;
+  min-height: 90vh;
+  height: 100%;
+  font-size: 1.2em;
 }
 
 .arrondi {
-  margin-top: 4%;
   padding-top: 2%;
-  border-radius: 20% 20% 0% 0%;
-  width: 100%;
-  height: 90vh;
-  border: 5px solid var(--color-accent);
-  transition: 0.3s;
-  background-color: rgba(73, 73, 73, 0.6);
 }
 
 .info {
@@ -33,9 +27,37 @@ video {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  margin: 5%;
 }
 
 .info img {
   object-fit: cover;
-  border-radius: 20% 20% 20% 20%;
+  border-radius: 20%;
+}
+
+.info_personnel, .info_professionnel {
+  max-width: 50%;
+  margin-left: 5%;
+
+  img {
+    object-fit: cover;
+    border-radius: 50%;
+    height: 300px;
+    width: 300px;
+    margin-left: 15px;
+  }
+
+  video {
+    height: 300px;
+    width: 300px;
+    margin-left: 15px;
+  }
+}
+
+.accordion {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;  
+  font-size: 1.2em;
 }

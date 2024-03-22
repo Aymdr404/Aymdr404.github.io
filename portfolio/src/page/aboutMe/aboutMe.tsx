@@ -8,7 +8,8 @@ const AboutMe: React.FC = () => {
         <source src="./video/planet_jupiter.mp4" type="video/mp4" />
       </video>
       <div className="arrondi">
-        </div>
+        
+      </div>
     </div>
   );
 }
