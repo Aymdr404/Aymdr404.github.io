@@ -2,7 +2,6 @@ import React from "react";
 import './experiences.css'
 import { Timeline } from "primereact/timeline";
 import { Card } from "primereact/card";
-import { Button } from "primereact/button";
 
 
 interface TimelineEvent {
