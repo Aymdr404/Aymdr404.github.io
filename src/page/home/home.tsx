@@ -10,11 +10,7 @@ const Home: React.FC = () => {
     <div className="home">
       <header className="home-header">
         <Navbar />
-        <div className="route-content">
-          <Routes >
-            <Route path="/" element={<Acceuil />} />
-          </Routes>
-        </div>
+        <Acceuil />
       </header>
       <div className="footer">
         <LinkMe />

@@ -12,9 +12,7 @@ const App: React.FC = () => {
     <div className="App">
       <header className="App-header">
         <PrimeReactProvider>
-          <BrowserRouter>
             <Home />
-          </BrowserRouter>
         </PrimeReactProvider>
       </header>
     </div>
