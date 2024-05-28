@@ -32,7 +32,7 @@ const Experience: React.FC = () => {
     const customizedContent = (item: TimelineEvent) => {
         return (
             <Card title={item.status} subTitle={item.date}>
-                { item.image && <img src={`./img/${item.image}`} alt={item.status} className="shadow-1 imagePanel" />}
+                { item.image && <img src={process.env.PUBLIC_URL + `/img/${item.image}`} alt={item.status} className="shadow-1 imagePanel" />}
                 <p>{item.info}</p>
             </Card>
         );

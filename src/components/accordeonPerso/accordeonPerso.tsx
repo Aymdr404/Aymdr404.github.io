@@ -15,13 +15,13 @@ const AccordeonPerso: React.FC = () => {
                 J'ai un besoin de me dépenser physiquement. Je trouve que le sport est un bon moyen de se défouler et de se vider la tête et de me permettre de me concentrer sur mes objectifs.
               </p>
             </section>
-            <img src="./img/hand.jpg" alt="hand" />
+            <img src={process.env.PUBLIC_URL + '/img/hand.jpg'} alt="hand" />
           </div>
             
         </AccordionTab>
         <AccordionTab header="Mon coté cuisinier">
           <div className="cuisine accordion">
-          <img src="./img/cuisine.jpg" alt="cuisine" />
+          <img src={process.env.PUBLIC_URL+ '/img/cuisine.jpg'} alt="cuisine" />
             <section className="text">
               <p className="m-0">
                   A côté de cela, j'aime bien cuisiner. J'aime bien faire des plats de tout les jours, mais aussi des plats plus élaborés.
@@ -46,7 +46,7 @@ const AccordeonPerso: React.FC = () => {
               </p>
             </section>
             <video autoPlay muted loop id="myVideo">
-              <source src="./video/araignee.mp4" type="video/mp4" />
+              <source src={process.env.PUBLIC_URL + '/video/araignee.mp4'} type="video/mp4" />
             </video>
           </div>
         </AccordionTab>
