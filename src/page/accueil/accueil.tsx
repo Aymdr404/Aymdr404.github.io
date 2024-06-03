@@ -24,7 +24,6 @@ const Acceuil: React.FC = () => {
               <h3>Developpeur Backend</h3>
               <p>Je suis un nouveau développeur Back End. Je suis actuellement en alternance chez Opjectif-PI, en effectuant ma formation dans le BUT informatique de grenoble.</p>
             </div>
-            <img src="https://www.w3schools.com/w3images/avatar_g2.jpg" alt="avatar" />
         </section>
         <section className="info_personnel">
           <h2>Parlons de moi</h2>

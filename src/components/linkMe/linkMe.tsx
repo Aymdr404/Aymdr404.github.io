@@ -8,14 +8,14 @@ const LinkMe: React.FC = () => {
     const items: MenuItem[] = [
         {
             label: 'Github',
-            icon: 'pi pi-pencil',
+            icon: 'pi pi-github',
             command: () => {
                 window.open('https://github.com/Aymdr404', '_blank');
             }
         },
         {
             label: 'Linkedin',
-            icon: 'pi pi-external-link',
+            icon: 'pi pi-linkedin',
             command: () => {
                 window.open('https://www.linkedin.com/in/aymeric-sabatier-3a1b8b1b7/', '_blank');
             }
