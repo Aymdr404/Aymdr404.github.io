@@ -3,6 +3,7 @@ import './accueil.css'
 import AccordeonPerso from "../../components/accordeonPerso/accordeonPerso.tsx";
 import AccordeonPro from "../../components/accordeonPro/accordeonPro.tsx";
 import Experience from "../../components/experiences/experiences.tsx";
+import Project from "../../components/project/project.tsx";
 
 
 const Acceuil: React.FC = () => {
@@ -33,15 +34,24 @@ const Acceuil: React.FC = () => {
           <h2>Parlons programmation maintenant</h2>
           <AccordeonPro />
         </section>
-        <section className="info_project">
+        <section className="info_experience">
           <h2>Mes expériences</h2>
           <Experience />
         </section>
-        <section className="info_contact">
+        <section className="info_project">
+          <h2>Projets</h2>
+          <p>Voici quelques projets que j'ai réalisé</p>
+          <div className="project_detail">
+            <Project title="Projet 1" description="Description du projet 1" img="img1.jpg"/>
+            <Project title="Projet 2" description="Description du projet 2" img="img2.jpg"/>
+            <Project title="Projet 3" description="Description du projet 3" img="img3.jpg"/>
+          </div>
+        </section>
+        {/* <section className="info_contact">
           <h2>Contact</h2>
           <p>Vous pouvez me contacter par mail ou par téléphone</p>
           <p>Mail:</p>
-        </section>
+        </section> */}
       </div>
     </div>
   );

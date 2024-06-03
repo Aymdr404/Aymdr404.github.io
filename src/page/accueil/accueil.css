@@ -125,7 +125,7 @@ body{
   border-radius: 20%;
 }
 
-.info_personnel, .info_professionnel, .info_project {
+.info_personnel, .info_professionnel, .info_experience {
   max-width: 50%;
   margin-left: 5%;
   margin-top: 10%;
@@ -166,4 +166,13 @@ body{
   justify-content: space-around;
   align-items: center;  
   font-size: 1.2em;
+}
+
+.project_detail {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 4fr));
+  grid-gap: 15px;
+  grid-auto-rows: minmax(180px, auto);
+  grid-auto-flow: dense;
+  padding: 1px;
 }

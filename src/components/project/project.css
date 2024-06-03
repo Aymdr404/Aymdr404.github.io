@@ -1,0 +1,15 @@
+/* demo shizzle only */
+.projectbody {
+    padding: 1rem;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #000;
+    background-color: #ccc;
+    border-radius: 10px;
+  }
+  
+  /* Still use global css (not utility css) for base typography etc? */
+  p {
+    margin-bottom: 0.8em;
+  }
