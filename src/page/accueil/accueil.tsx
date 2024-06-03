@@ -9,10 +9,16 @@ const Acceuil: React.FC = () => {
   
   return (
     <div className="accueil">
+      <section className="arrondi">
+          <h2>Sabatier Aymeric</h2>
+          <div className="blob"></div>
+          <div className="arrow">
+              <span></span>
+              <span></span>
+              <span></span>
+          </div>
+      </section>
       <div className="contenu">
-        <section className="arrondi">
-          <h2>Bonjour ici Sabatier Aymeric</h2>
-        </section>
         <section className="info">
             <div>
               <h3>Developpeur Backend</h3>
