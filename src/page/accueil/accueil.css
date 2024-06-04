@@ -160,6 +160,13 @@ body{
   margin-left: 45%;
 }
 
+.info_personnel, .info_professionnel{
+  @media (width < 1300px){
+    margin-left: 5%;
+    max-width: 100%;
+  }
+}
+
 .accordion {
   display: flex;
   flex-direction: row;
@@ -170,7 +177,7 @@ body{
 
 .project_detail {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(00px, 4fr));
+  grid-template-columns: repeat(auto-fill, minmax(500px, 4fr));
   grid-gap: 15px;
   grid-auto-rows: minmax(180px, auto);
   grid-auto-flow: dense;
