@@ -42,8 +42,8 @@ const Acceuil: React.FC = () => {
           <h2>Projets</h2>
           <p>Voici quelques projets que j'ai réalisé</p>
           <div className="project_detail">
-            <Project title="Projet 1" description="Description du projet 1" img="img1.jpg"/>
-            <Project title="Projet 2" description="Description du projet 2" img="img2.jpg"/>
+            <Project title="Site aux enchères" description="Ce projet nous demandais a permis de réaliser un site aux enchères.  accompagné d'une base de données en SQL" img="img1.jpg"/>
+            <Project title="Black Hole Bot" description="A l'occasion d'une GameJam organisée par l'IUT 2 Informatique de Grenoble, nous avons développé en groupe de 4, un jeu sur le thème d'un robot et de la gravité. Dans ce jeu, il va falloir survivre 60 secondes sous différentes gravités afin de récupérer des pièces pour réparer son vaisseau. Ce jeu a été réalisé à l'aide de la librairie python pygame." img="img2.jpg"/>
             <Project title="Projet 3" description="Description du projet 3" img="img3.jpg"/>
           </div>
         </section>
