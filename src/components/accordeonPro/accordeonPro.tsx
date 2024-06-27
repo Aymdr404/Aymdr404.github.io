@@ -16,12 +16,12 @@ const AccordeonPro: React.FC = () => {
                     J'ai appris à utiliser des outils comme Bootstrap, Materialize, PrimeReact et PrimeNG pour améliorer le design de mes sites.
                   </p>
                 </section>
-                <img src={process.env.PUBLIC_URL + '/img/react.png'} alt="react" />
+                <img src={process.env.PUBLIC_URL + '/img/HTML.png'} alt="Html-logo" />
               </div>
             </AccordionTab>
             <AccordionTab header="Langages back">
               <div className="back accordion">
-                <img src={process.env.PUBLIC_URL + '/img/node.png'} alt="node" />
+                <img src={process.env.PUBLIC_URL + '/img/Java.png'} alt="Java-logo" />
                 <section className="text">
                   <p className="m-0">
                     J'ai appris à développer en back avec les langages C, Java, Python, PHP.

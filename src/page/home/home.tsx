@@ -9,7 +9,7 @@ const Home: React.FC = () => {
   return (
     <div className="home">
       <header className="home-header">
-        <Navbar />
+        {/* <Navbar /> */}
         <Acceuil />
       </header>
       <div className="footer">
