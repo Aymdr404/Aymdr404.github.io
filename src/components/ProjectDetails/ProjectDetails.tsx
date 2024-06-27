@@ -6,7 +6,7 @@ import { Chip } from 'primereact/chip';
 interface ProjectDetailsProps {
     title: string;
     description: string;
-    img: string;
+    img: string[];
     onClose: () => void;
     technologies: string[];
 }
@@ -18,7 +18,11 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({ title, description, img
                 <button className="close-button" onClick={onClose}>X</button>
                 <h2>{title}</h2>
                 <p>{description}</p>
-                <img src={img} alt={title} />
+                <div className="img-container">
+                    {img.map((img, index) => (
+                        <img key={index} src={process.env.PUBLIC_URL + '/img/' + img} alt={title} />
+                    ))} 
+                </div>
                 <div className="technologies">
                     <h3>Technologies utilisées:</h3>
                     <div className="chips">
