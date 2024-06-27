@@ -21,7 +21,7 @@ const AccordeonPro: React.FC = () => {
             </AccordionTab>
             <AccordionTab header="Langages back">
               <div className="back accordion">
-                <img src={process.env.PUBLIC_URL + '/img/Java.png'} alt="Java-logo" />
+                <img src={process.env.PUBLIC_URL + '/img/java.png'} alt="Java-logo" />
                 <section className="text">
                   <p className="m-0">
                     J'ai appris à développer en back avec les langages C, Java, Python, PHP.
