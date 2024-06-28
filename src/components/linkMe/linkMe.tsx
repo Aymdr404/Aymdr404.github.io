@@ -30,7 +30,7 @@ const LinkMe: React.FC = () => {
     ];
 
     return (
-        <div className="card">
+        <div className="card-link">
             <div style={{ height: '500px' }} className="flex align-items-center justify-content-center">
                 <SpeedDial model={items} radius={120} type="quarter-circle" direction="up-left" />
             </div>

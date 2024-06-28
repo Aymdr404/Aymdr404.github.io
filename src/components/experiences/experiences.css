@@ -1,5 +1,12 @@
 .cardTimeline {
     position: relative !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.p-component {
+    max-width: 50em !important;
 }
 
 @media (width < 900px) {
@@ -8,5 +15,6 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
     }
 }

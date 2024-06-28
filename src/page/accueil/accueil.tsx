@@ -12,7 +12,7 @@ const Acceuil: React.FC = () => {
     <div className="accueil">
       <section className="arrondi">
           <h2>Sabatier Aymeric</h2>
-          <div className="blob"></div>
+          <div className="blob-acceuil"></div>
           <div className="arrow">
               <span></span>
               <span></span>
@@ -29,6 +29,7 @@ const Acceuil: React.FC = () => {
         <section className="info_personnel">
           <h2>Parlons de moi</h2>
           <AccordeonPerso />
+          <div className="blob-corp right"></div>
         </section>
         <section className="info_professionnel">
           <h2>Parlons programmation maintenant</h2>
@@ -37,6 +38,7 @@ const Acceuil: React.FC = () => {
         <section className="info_experience">
           <h2>Mes expériences</h2>
           <Experience />
+          <div className="blob-corp"></div>
         </section>
         <section className="info_project">
           <h2>Projets</h2>

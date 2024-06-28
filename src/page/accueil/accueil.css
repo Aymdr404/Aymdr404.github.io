@@ -21,7 +21,7 @@ body{
   font-size: 4em;
 }
 
-.blob {
+.blob-acceuil {
   position: absolute;
   opacity: 0.5;
   width: 400px;
@@ -37,6 +37,30 @@ body{
     rgba(118, 74, 166, 1) 81%
   );
 
+  /*  Optional  */
+  /*   box-shadow: inset 50px 50px 17px 0px #ff588b,
+    inset 100px 100px 17px 0px #66319f; */
+}
+
+.blob-corp {
+  position: absolute;
+  opacity: 0.9;
+  width: 400px;
+  aspect-ratio: 1/1;
+  animation: animate-background 10s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite
+    alternate forwards;
+  filter: blur(40px);
+  z-index: -1;
+  background: linear-gradient(
+    47deg,
+    rgb(255, 210, 88) 21%,
+    rgb(173, 0, 0) 67%,
+    rgba(118, 74, 166, 1) 81%
+  );
+
+  right {
+    left: 90%;
+  }
   /*  Optional  */
   /*   box-shadow: inset 50px 50px 17px 0px #ff588b,
     inset 100px 100px 17px 0px #66319f; */
@@ -132,7 +156,6 @@ body{
 
 .info_personnel, .info_professionnel, .info_experience {
   max-width: 50%;
-  margin-left: 5%;
   margin-top: 10%;
 
   img, video{
@@ -170,6 +193,10 @@ body{
     margin-left: 5%;
     max-width: 100%;
   }
+}
+
+.info_experience{
+  min-width: 100%;
 }
 
 .accordion {
