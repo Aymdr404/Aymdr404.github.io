@@ -29,7 +29,7 @@ const Acceuil: React.FC = () => {
         <section className="info_personnel">
           <h2>Parlons de moi</h2>
           <AccordeonPerso />
-          <div className="blob-corp right"></div>
+          <div className="blob-corp-right"></div>
         </section>
         <section className="info_professionnel">
           <h2>Parlons programmation maintenant</h2>
@@ -38,13 +38,13 @@ const Acceuil: React.FC = () => {
         <section className="info_experience">
           <h2>Mes expériences</h2>
           <Experience />
-          <div className="blob-corp"></div>
+          <div className="blob-corp-left"></div>
         </section>
         <section className="info_project">
           <h2>Projets</h2>
-          <p>Voici quelques projets que j'ai réalisé</p>
+          <p>Voici quelques projets que j'ai réalisés</p>
           <div className="project_detail">
-            <Project title="Site aux enchères" technologies={['PHP', 'SQL', 'GIT']} description="Ce projet nous demandais a permis de réaliser un site aux enchères.  accompagné d'une base de données en SQL"
+            <Project title="Site aux enchères" technologies={['PHP', 'SQL', 'GIT']} description="Ce projet nous a permis de réaliser un site aux enchères.  accompagné d'une base de données en SQL"
              img_description={['enchères.png']}/>
             <Project title="Black Hole Bot" technologies={['Python', 'GIT']} description="A l'occasion d'une GameJam organisée par l'IUT 2 Informatique de Grenoble, nous avons développé en groupe de 4, un jeu sur le thème d'un robot et de la gravité. Dans ce jeu, il va falloir survivre 60 secondes sous différentes gravités afin de récupérer des pièces pour réparer son vaisseau. Ce jeu a été réalisé à l'aide de la librairie python pygame."
               img_description={['blackholebot-1.png']}/>

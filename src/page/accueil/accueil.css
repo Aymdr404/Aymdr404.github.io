@@ -10,7 +10,6 @@ body{
 
 /*-----------------------------------------------------------------------------------*/
 
-
 /*------------------- CSS Accueil  -------------------*/
 .arrondi {
   height: 100vh;
@@ -25,7 +24,7 @@ body{
   position: absolute;
   opacity: 0.5;
   width: 400px;
-  aspect-ratio: 1/1;
+  aspect-ratio: 1/2;
   animation: animate-background 10s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite
     alternate forwards;
   filter: blur(40px);
@@ -36,18 +35,14 @@ body{
     rgb(0 164 173) 67%,
     rgba(118, 74, 166, 1) 81%
   );
-
-  /*  Optional  */
-  /*   box-shadow: inset 50px 50px 17px 0px #ff588b,
-    inset 100px 100px 17px 0px #66319f; */
 }
 
-.blob-corp {
+.blob-corp-left {
   position: absolute;
   opacity: 0.9;
   width: 400px;
   aspect-ratio: 1/1;
-  animation: animate-background 10s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite
+  animation: animate-background 15s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite
     alternate forwards;
   filter: blur(40px);
   z-index: -1;
@@ -57,13 +52,25 @@ body{
     rgb(173, 0, 0) 67%,
     rgba(118, 74, 166, 1) 81%
   );
+}
 
-  right {
-    left: 90%;
-  }
-  /*  Optional  */
-  /*   box-shadow: inset 50px 50px 17px 0px #ff588b,
-    inset 100px 100px 17px 0px #66319f; */
+.blob-corp-right {
+  position: absolute;
+  opacity: 0.9;
+  width: 400px;
+  aspect-ratio: 1/1;
+  animation: animate-background 20s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite
+    alternate forwards;
+  filter: blur(40px);
+  z-index: -1;
+  background: linear-gradient(
+    47deg,
+    rgb(183, 235, 135) 21%,
+    rgb(236,228,171) 67%,
+    rgb(245, 171, 129) 81%
+  );
+
+  left:70%;
 }
 
 @keyframes animate-background {
