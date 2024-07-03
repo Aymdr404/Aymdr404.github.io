@@ -32,6 +32,9 @@ const Project: React.FC<ProjectProps> = ({ title, description, technologies, img
                             <h3 className="mb-4 text-2xl">{title}</h3>
                             <div className="mb-4 text-grey-darker text-sm flex-1">
                                 <p>{description}</p>
+                                <div className="img-container">
+                                   <img src={process.env.PUBLIC_URL + '/img/' + img_description[0]} alt={title} />
+                                 </div>
                                 <button onClick={handleShowDetails} className="details-button">Voir plus</button>
                             </div>
                         </div>
