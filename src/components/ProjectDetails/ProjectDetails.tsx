@@ -19,11 +19,13 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({ title, description, img
                 <button className="close-button" onClick={onClose}>X</button>
                 <h2>{title}</h2>
                 <h3>{role}</h3>
-                <p>{description}</p>
                 <div className="img-container">
                     {img.map((img, index) => (
                         <img key={index} src={process.env.PUBLIC_URL + '/img/' + img} alt={title} />
                     ))} 
+                </div>
+                <div className="description">
+                    <p>{description}</p>
                 </div>
                 <div className="technologies">
                     <h3>Technologies utilisées:</h3>
