@@ -9,14 +9,16 @@ interface ProjectDetailsProps {
     img: string[];
     onClose: () => void;
     technologies: string[];
+    role: string;
 }
 
-const ProjectDetails: React.FC<ProjectDetailsProps> = ({ title, description, img, technologies, onClose }) => {
+const ProjectDetails: React.FC<ProjectDetailsProps> = ({ title, description, img, technologies, role, onClose }) => {
     return (
         <div className="project-details-overlay">
             <div className="project-details">
                 <button className="close-button" onClick={onClose}>X</button>
                 <h2>{title}</h2>
+                <h3>{role}</h3>
                 <p>{description}</p>
                 <div className="img-container">
                     {img.map((img, index) => (
