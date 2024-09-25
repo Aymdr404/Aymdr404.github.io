@@ -1,5 +1,35 @@
+/* Style général pour le body */
 body {
     margin: 0 !important;
     background-color: #000000;
     font-family: Poppins, sans-serif !important;
+}
+
+/* Conteneur principal pour la page home */
+.page-home {
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+/* Pour les très grands écrans (PC) */
+@media (min-width: 1200px) {
+    .page-home {
+        max-width: 1200px; /* Largeur maximale pour les grands écrans */
+    }
+}
+
+/* Pour les tablettes et petits écrans */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .page-home {
+        max-width: 768px; /* Largeur maximale pour les tablettes */
+    }
+}
+
+/* Pour les téléphones (petits écrans) */
+@media (max-width: 767px) {
+    .page-home {
+        max-width: 100%; /* Utiliser toute la largeur disponible sur les téléphones */
+    }
 }

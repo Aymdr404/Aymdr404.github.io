@@ -1,16 +1,8 @@
-body{
-  /* overflow: hidden; */
-  color : #ffffff;
-} 
-
-.accueil {
-  color : #ffffff;
+body {
+  color: #ffffff;
 }
 
-
-/*-----------------------------------------------------------------------------------*/
-
-/*------------------- CSS Accueil  -------------------*/
+/*------------------- CSS Accueil (pour grand écran) -------------------*/
 .arrondi {
   height: 100vh;
   width: 100%;
@@ -18,100 +10,39 @@ body{
   justify-content: center;
   align-items: center;
   font-size: 4em;
-  h2{
-    margin: 3vh;
-    @media (width < 2000px){
-      font-size: 1em;      
-    }
-  }
 }
 
 .blob-acceuil {
   position: absolute;
   opacity: 0.5;
-  @media (width < 2000px){
-    width: 200px;
-  }
-  width: 400px;
+  width: 400px; /* Taille par défaut pour PC */
   aspect-ratio: 1/1;
-  animation: animate-background 10s cubic-bezier(0.66, -0.55, 0.27, 1.55) infinite
-    alternate forwards;
+  animation: animate-background 10s cubic-bezier(0.66, -0.55, 0.27, 1.55) infinite alternate forwards;
   filter: blur(40px);
   z-index: -1;
-  background: linear-gradient(
-    47deg,
-    rgba(255, 88, 139, 1) 21%,
-    rgb(0 164 173) 67%,
-    rgba(118, 74, 166, 1) 81%
-  );
+  background: linear-gradient(47deg, rgba(255, 88, 139, 1) 21%, rgb(0 164 173) 67%, rgba(118, 74, 166, 1) 81%);
 }
 
-.blob-corp-left {
+.blob-corp-left, .blob-corp-right {
   position: absolute;
   opacity: 0.9;
-  width: 200px;
+  width: 400px; /* Taille par défaut pour PC */
   aspect-ratio: 1/1;
-  animation: animate-background 15s cubic-bezier(0.68, -0.55, 0, 0) infinite
-    alternate forwards;
   filter: blur(40px);
   z-index: -1;
-  background: linear-gradient(
-    47deg,
-    rgb(255, 210, 88) 21%,
-    rgb(173, 0, 0) 67%,
-    rgba(118, 74, 166, 1) 81%
-  );
+  background: linear-gradient(47deg, rgb(183, 235, 135) 21%, rgb(236,228,171) 67%, rgb(245, 171, 129) 81%);
 }
 
 .blob-corp-right {
-  position: absolute;
-  opacity: 0.9;
-  @media (width < 2000px){
-    width: 200px;
-  }
-  width: 400px;
-  aspect-ratio: 1/1;
-  animation: animate-background 20s cubic-bezier(0.10, -0.55, 0.27, 0.25) infinite
-    alternate forwards;
-  filter: blur(40px);
-  z-index: -1;
-  background: linear-gradient(
-    47deg,
-    rgb(183, 235, 135) 21%,
-    rgb(236,228,171) 67%,
-    rgb(245, 171, 129) 81%
-  );
-  left:65%;
+  left: 65%;
 }
-
-@keyframes animate-background {
-  0% {
-    translate: 30% -25%;
-    border-radius: 60% 40% 30% 70% / 100% 85% 92% 74%;
-  }
-  50% {
-    translate: 0% 13%;
-    border-radius: 20% 71% 47% 70% / 81% 15% 22% 54%;
-    rotate: 41deg;
-    scale: 1.15;
-  }
-  100% {
-    translate: -45% 39%;
-    border-radius: 100% 75% 92% 74% / 60% 80% 30% 70%;
-    rotate: -60deg;
-    scale: 1.05;
-  }
-}
-
 
 /*** Code css flèche ***/
-
 .arrow {
   position: absolute;
   top: 92%;
   left: 50%;
   transform: translate(-50%, -50%);
-  transform: rotate(0deg);
   cursor: pointer;
 }
 
@@ -122,7 +53,6 @@ body{
   border-bottom: 5px solid white;
   border-right: 5px solid white;
   transform: rotate(45deg);
-  margin: -10px;
   animation: animate-arrow 3s infinite;
 }
 
@@ -136,27 +66,26 @@ body{
 
 @keyframes animate-arrow {
   0% {
-      opacity: 0;
-      transform: rotate(45deg) translate(-20px, -20px);
+    opacity: 0;
+    transform: rotate(45deg) translate(-20px, -20px);
   }
   50% {
-      opacity: 1;
+    opacity: 1;
   }
   100% {
-      opacity: 0;
-      transform: rotate(45deg) translate(20px, 20px);
+    opacity: 0;
+    transform: rotate(45deg) translate(20px, 20px);
   }
 }
 
 .contenu {
   display: flex;
   flex-direction: column;
-  justify-content: center;  
+  justify-content: center;
   padding: 5%;
   background-color: rgba(10, 10, 10, 0.829);
   width: 100%;
   min-height: 90vh;
-  height: 100%;
   font-size: 1.2em;
 }
 
@@ -172,60 +101,22 @@ body{
   border-radius: 20%;
 }
 
-.info_personnel, .info_professionnel, .blob {
+.info_personnel, .info_professionnel {
   max-width: 50%;
   margin-top: 10%;
-
-  img, video{
-    margin: 2%;
-  }
-
-  @media (width > 100vh){
-    img {
-      object-fit: cover;
-      height: 25vh;
-    }
-
-    video {
-      height: 25vh;
-    }
-
-  }
-
-  @media (width < 1300px){
-    img {
-      display: none;
-    }
-
-    video {
-      display: none;
-    }
-  }
 }
 
-.info_professionnel{
+.info_professionnel {
   margin-left: 65%;
 }
 
-.info_personnel, .info_professionnel{
-  @media (width < 1300px){
-    margin-left: 5%;
-    max-width: 100%;
-  }
+/* Styles pour les grands écrans (PC) */
+.info img, .info video {
+  object-fit: cover;
+  height: 25vh;
 }
 
-.info_experience{
-  min-width: 100%;
-}
-
-.accordion {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;  
-  font-size: 1.2em;
-}
-
+/* Styles pour PC */
 .project_detail {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(500px, 4fr));
@@ -233,4 +124,74 @@ body{
   grid-auto-rows: minmax(180px, auto);
   grid-auto-flow: dense;
   padding: 1px;
+}
+
+/*------------------- Media Queries pour tablettes et petits PC -------------------*/
+@media (max-width: 1300px) {
+  .arrondi h2 {
+    font-size: 2em; /* Réduire la taille du texte */
+  }
+
+  .blob-acceuil, .blob-corp-right {
+    width: 200px; /* Réduction de la taille des blobs */
+  }
+
+  .info_personnel, .info_professionnel {
+    max-width: 100%;
+    margin-left: 5%;
+  }
+
+  .info img, .info video {
+    display: none; /* Masquer les images et vidéos sur les écrans plus petits */
+  }
+
+  .contenu {
+    font-size: 1em; /* Réduire légèrement la taille du texte */
+  }
+
+  .arrow span {
+    width: 2vw; /* Agrandir légèrement la flèche */
+    height: 2vw;
+  }
+}
+
+/*------------------- Media Queries spécifiques aux téléphones -------------------*/
+@media (max-width: 768px) {
+  .arrondi {
+    font-size: 1.5em; /* Réduire encore plus la taille du texte */
+    justify-content: center;
+  }
+
+  .blob-acceuil, .blob-corp-right, .blob-corp-left {
+    width: 150px; /* Taille encore plus petite des blobs */
+  }
+
+  .info {
+    flex-direction: column; /* Passage à une direction de colonne pour les téléphones */
+    align-items: center;
+  }
+
+  .info_personnel, .info_professionnel {
+    max-width: 100%;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .contenu {
+    font-size: 0.9em; /* Taille du texte encore plus petite */
+    padding: 10%;
+  }
+
+  .arrow {
+    top: 85%; /* Ajuster la position de la flèche */
+  }
+
+  .arrow span {
+    width: 3vw;
+    height: 3vw;
+  }
+
+  .project_detail {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 4fr));
+  }
 }
