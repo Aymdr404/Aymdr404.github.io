@@ -15,5 +15,12 @@
             color: #fff;
         }
     }
+}
+
+@media (max-width: 767px) {
+    .card-link{
+        top: 90%;
+        left: 80%;
+    }
     
 }

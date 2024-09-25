@@ -96,11 +96,6 @@ body {
   align-items: center;
 }
 
-.info img {
-  object-fit: cover;
-  border-radius: 20%;
-}
-
 .info_personnel, .info_professionnel {
   max-width: 50%;
   margin-top: 10%;
@@ -126,8 +121,24 @@ body {
   padding: 1px;
 }
 
+.accordion {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;  
+  font-size: 1.2em;
+}
+
+img {
+  height: 25vh;
+}
+
+video {
+  height: 25vh;
+}
+
 /*------------------- Media Queries pour tablettes et petits PC -------------------*/
-@media (max-width: 1300px) {
+@media (max-width: 1500px) {
   .arrondi h2 {
     font-size: 2em; /* Réduire la taille du texte */
   }
@@ -139,10 +150,6 @@ body {
   .info_personnel, .info_professionnel {
     max-width: 100%;
     margin-left: 5%;
-  }
-
-  .info img, .info video {
-    display: none; /* Masquer les images et vidéos sur les écrans plus petits */
   }
 
   .contenu {
@@ -163,7 +170,7 @@ body {
   }
 
   .blob-acceuil, .blob-corp-right, .blob-corp-left {
-    width: 150px; /* Taille encore plus petite des blobs */
+    width: 100px; /* Taille encore plus petite des blobs */
   }
 
   .info {
@@ -175,6 +182,18 @@ body {
     max-width: 100%;
     margin-left: 0;
     text-align: center;
+  }
+
+  img {
+    height: 5vh;
+  }
+
+  video {
+    height: 10vh;
+  }
+
+  .accordion {
+    display: block;
   }
 
   .contenu {
