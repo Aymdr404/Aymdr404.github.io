@@ -23,7 +23,7 @@ const Acceuil: React.FC = () => {
         <section className="info">
             <div>
               <h3>Developpeur Backend</h3>
-              <p>Je suis un nouveau développeur Back End. Je suis actuellement en alternance chez Opjectif-PI, en effectuant ma formation dans le BUT informatique de grenoble.</p>
+              <p>Étant jeune diplômé du BUT informatique de l'UGA, je suis à la recherche d'emploi afin de gagner d'avantage d'expérience sur les technologies du web, qu'elles soient front-end ou back-end. Je suis une personne autonome mais j'aime aussi travailler en équipe.</p>
             </div>
         </section>
         <section className="info_personnel">

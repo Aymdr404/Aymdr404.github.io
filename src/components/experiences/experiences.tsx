@@ -28,7 +28,7 @@ const Experience: React.FC = () => {
     }, []);
 
     const events: TimelineEvent[] = [
-        { status: 'Objectif-Pi', date: 'Août 2023 => Août 2024', color: '#9C27B0', image: 'logo_OP.png', info:'Alternant développeur back end sur un ERP.' },
+        { status: 'Objectif-Pi', date: 'Août 2023 => Août 2024', color: '#9C27B0', image: 'logo_OP.png', info:'Développeur backend en alternance' },
         { status: 'Remedee-labs', date: 'Avril 2023 => Juin 2023', color: '#673AB7', image:'Logo_RemedeeLabs.png', info:'Developpeur front end, réalisation d\'une web app de gestion de compte client ' },
         { status: 'BUT informatique', date: 'Septembre 2021 => Juillet 2024', color: '#FF9800', image:'logo_BUT.png', info:'Formation en alternance chez Objectif-Pi' }
     ];
