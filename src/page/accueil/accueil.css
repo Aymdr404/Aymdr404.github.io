@@ -18,11 +18,20 @@ body{
   justify-content: center;
   align-items: center;
   font-size: 4em;
+  h2{
+    margin: 3vh;
+    @media (width < 2000px){
+      font-size: 1em;      
+    }
+  }
 }
 
 .blob-acceuil {
   position: absolute;
   opacity: 0.5;
+  @media (width < 2000px){
+    width: 200px;
+  }
   width: 400px;
   aspect-ratio: 1/1;
   animation: animate-background 10s cubic-bezier(0.66, -0.55, 0.27, 1.55) infinite
@@ -40,9 +49,9 @@ body{
 .blob-corp-left {
   position: absolute;
   opacity: 0.9;
-  width: 400px;
+  width: 200px;
   aspect-ratio: 1/1;
-  animation: animate-background 15s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite
+  animation: animate-background 15s cubic-bezier(0.68, -0.55, 0, 0) infinite
     alternate forwards;
   filter: blur(40px);
   z-index: -1;
@@ -57,9 +66,12 @@ body{
 .blob-corp-right {
   position: absolute;
   opacity: 0.9;
+  @media (width < 2000px){
+    width: 200px;
+  }
   width: 400px;
   aspect-ratio: 1/1;
-  animation: animate-background 20s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite
+  animation: animate-background 20s cubic-bezier(0.10, -0.55, 0.27, 0.25) infinite
     alternate forwards;
   filter: blur(40px);
   z-index: -1;
@@ -69,7 +81,6 @@ body{
     rgb(236,228,171) 67%,
     rgb(245, 171, 129) 81%
   );
-
   left:65%;
 }
 
@@ -161,7 +172,7 @@ body{
   border-radius: 20%;
 }
 
-.info_personnel, .info_professionnel, .info_experience {
+.info_personnel, .info_professionnel, .blob {
   max-width: 50%;
   margin-top: 10%;
 
@@ -178,6 +189,7 @@ body{
     video {
       height: 25vh;
     }
+
   }
 
   @media (width < 1300px){
@@ -192,7 +204,7 @@ body{
 }
 
 .info_professionnel{
-  margin-left: 45%;
+  margin-left: 65%;
 }
 
 .info_personnel, .info_professionnel{

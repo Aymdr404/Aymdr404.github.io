@@ -4,7 +4,7 @@ import './accordeonPerso.css'
 
 const AccordeonPerso: React.FC = () => {
     return(
-      <Accordion >
+      <Accordion>
         <AccordionTab header="Mon coté sportif">
           <div className="sport accordion">
             <section className="text">
@@ -17,8 +17,8 @@ const AccordeonPerso: React.FC = () => {
             </section>
             <img src={process.env.PUBLIC_URL + '/img/hand.jpg'} alt="hand" />
           </div>
-            
         </AccordionTab>
+
         <AccordionTab header="Mon coté cuisinier">
           <div className="cuisine accordion">
           <img src={process.env.PUBLIC_URL+ '/img/cuisine.jpg'} alt="cuisine" />
@@ -32,6 +32,7 @@ const AccordeonPerso: React.FC = () => {
             </section>
           </div>
         </AccordionTab>
+
         <AccordionTab header="Mon coté acharné">
           <div className="travail accordion">
             <section className="text">

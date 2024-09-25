@@ -29,7 +29,7 @@ const Acceuil: React.FC = () => {
         <section className="info_personnel">
           <h2>Parlons de moi</h2>
           <AccordeonPerso />
-          <div className="blob-corp-right"></div>
+          <div className="blob-corp-right blob"></div>
         </section>
         <section className="info_professionnel">
           <h2>Parlons programmation maintenant</h2>
@@ -37,8 +37,8 @@ const Acceuil: React.FC = () => {
         </section>
         <section className="info_experience">
           <h2>Mes expériences</h2>
-          <Experience />
-          <div className="blob-corp-left"></div>
+          <Experience /> 
+          <div className="blob-corp-left blob"></div>
         </section>
         <section className="info_project">
           <h2>Projets</h2>

@@ -9,12 +9,58 @@
     max-width: 50em !important;
 }
 
-@media (width < 900px) {
+@media (width < 1300px) {
     .cardTimeline {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        display: block;
+        
+    }
+    .p-timeline-event-content {
+        margin: 10px ;
+    }
 
+    .p-timeline-event-connector {
+        height: 100% !important;
+    }
+}
+
+/* Styles par défaut pour les grandes fenêtres */
+.imagePanel {
+    width: 150px; /* Taille par défaut de l'image */
+    height: auto;
+    border-radius: 8px; /* Coins légèrement arrondis pour une image */
+    margin-bottom: 1rem;
+}
+
+/* Styles par défaut pour les avatars */
+.p-avatar {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+/* Quand la fenêtre est inférieure à 1200px, l'image devient plus petite (ou avatar) */
+@media (max-width: 1300px) {
+    .imagePanel {
+        width: 100px; /* Réduction de la taille de l'image */
+        height: auto;
+    }
+    
+    .p-avatar {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+/* Quand la fenêtre est inférieure à 900px, alignement simple */
+@media (max-width: 1300px) {
+    .imagePanel {
+        width: 80px; /* Encore plus petite pour les très petites fenêtres */
+        height: auto;
+    }
+    
+    .p-avatar {
+        width: 50px;
+        height: 50px;
     }
 }
