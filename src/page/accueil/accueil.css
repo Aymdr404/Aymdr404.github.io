@@ -99,6 +99,13 @@ body {
 .info_personnel, .info_professionnel {
   max-width: 50%;
   margin-top: 10%;
+  img {
+    height: 25vh;
+  }
+  
+  video {
+    height: 25vh;
+  }
 }
 
 .info_professionnel {
@@ -129,16 +136,9 @@ body {
   font-size: 1.2em;
 }
 
-img {
-  height: 25vh;
-}
-
-video {
-  height: 25vh;
-}
 
 /*------------------- Media Queries pour tablettes et petits PC -------------------*/
-@media (max-width: 1500px) {
+@media (max-width: 1400px) {
   .arrondi h2 {
     font-size: 2em; /* Réduire la taille du texte */
   }
@@ -150,6 +150,12 @@ video {
   .info_personnel, .info_professionnel {
     max-width: 100%;
     margin-left: 5%;
+    img{
+      height: 15vh;
+    }
+    video {
+      height: 15vh;
+    }
   }
 
   .contenu {
@@ -182,14 +188,13 @@ video {
     max-width: 100%;
     margin-left: 0;
     text-align: center;
-  }
-
-  img {
-    height: 5vh;
-  }
-
-  video {
-    height: 10vh;
+    img {
+      height: 5vh;
+    }
+  
+    video {
+      height: 10vh;
+    }
   }
 
   .accordion {
