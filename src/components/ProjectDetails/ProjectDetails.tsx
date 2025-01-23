@@ -1,7 +1,7 @@
 import React from "react";
-import './ProjectDetails.css'
+import ReactDOM from "react-dom";
+import './ProjectDetails.css';
 import { Chip } from 'primereact/chip';
-
 
 interface ProjectDetailsProps {
     title: string;
@@ -13,7 +13,7 @@ interface ProjectDetailsProps {
 }
 
 const ProjectDetails: React.FC<ProjectDetailsProps> = ({ title, description, img, technologies, role, onClose }) => {
-    return (
+    const overlayContent = (
         <div className="project-details-overlay">
             <div className="project-details">
                 <button className="close-button" onClick={onClose}>X</button>
@@ -38,6 +38,9 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({ title, description, img
             </div>
         </div>
     );
-}
+
+    // Render using a portal
+    return ReactDOM.createPortal(overlayContent, document.body);
+};
 
 export default ProjectDetails;
