@@ -3,6 +3,8 @@ body {
     margin: 0 !important;
     background-color: #000000;
     font-family: Poppins, sans-serif !important;
+
+    overflow-x: hidden;
 }
 
 /* Conteneur principal pour la page home */

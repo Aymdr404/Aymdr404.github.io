@@ -20,6 +20,17 @@ h1{
   font-size: 1.2em;
 }
 
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /*------------------- Media Queries pour tablettes et petits PC -------------------*/
 @media (max-width: 1400px) {
   .arrondi h2 {

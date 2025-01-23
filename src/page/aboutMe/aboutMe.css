@@ -32,7 +32,7 @@
 /*** Code css flèche ***/
 .arrow {
     position: absolute;
-    top: 92%;
+    top: 95%;
     left: 50%;
     transform: translate(-50%, -50%);
     cursor: pointer;
