@@ -1,5 +1,5 @@
 .projectbody {
-
+  position: relative;
   max-width: 55vh;
   min-height: 35vh;
 
@@ -19,14 +19,18 @@ p {
   }
 
 .details-button {
-    background-color: #272727;
-    color: #f1f1f1;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.5s;
-  }
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  
+  background-color: #272727;
+  color: #f1f1f1;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.5s;
+}
 
 .details-button:hover {
     background-color: #f1f1f1;
