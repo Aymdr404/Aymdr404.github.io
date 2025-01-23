@@ -25,7 +25,7 @@ const SkillDescription: React.FC<SkillDescriptionProps> = ({title, description, 
             </section>
             <p className="description">{description}</p>
             <div>
-                <Slider value={pourcentage} />
+                <Slider value={pourcentage} disabled/>
             </div>
         </div>
     );

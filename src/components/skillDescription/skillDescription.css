@@ -4,11 +4,10 @@
     padding: 10px;
     border-radius: 10px;
     background-color: hsla(0, 0%, 53%, 0);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(119, 119, 119, 0.591);
 
     min-width: 30vh;
-    max-width: 40vh;
-
+    max-width: 43vh;
     color: #e7e7e7;
 }
 
@@ -16,6 +15,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    h3{
+        font-size: 1.5rem;
+        color: rgba(59, 105, 183, 0.829);;
+    }
 }
 
 .description{
