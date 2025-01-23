@@ -8,7 +8,7 @@ import ProjectPage from "../projectPage/projectPage.tsx";
 
 const Accueil: React.FC = () => {
   const [visibleSections, setVisibleSections] = useState<Set<number>>(new Set());
-  const sectionsRef = useRef<HTMLDivElement[]>([]); // Références pour chaque section
+  const sectionsRef = useRef<HTMLDivElement[]>([]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -17,10 +17,8 @@ const Accueil: React.FC = () => {
           const index = Number(entry.target.getAttribute('data-index'));
 
           if (entry.isIntersecting) {
-            // Ajouter l'index à l'ensemble si la section entre dans la vue
             setVisibleSections((prev) => new Set([...prev, index]));
           } else {
-            // Retirer l'index si la section sort de la vue
             setVisibleSections((prev) => {
               const updated = new Set(prev);
               updated.delete(index);
@@ -37,7 +35,7 @@ const Accueil: React.FC = () => {
       if (section) observer.observe(section);
     });
 
-    return () => observer.disconnect(); // Nettoyer l'observateur
+    return () => observer.disconnect();
   }, []);
 
   return (

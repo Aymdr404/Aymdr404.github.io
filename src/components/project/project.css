@@ -1,14 +1,18 @@
 .projectbody {
-    padding: 1rem;
-    font-size: 14px;
-    font-weight: bold;
-    /* text-transform: uppercase; */
-    color: #ffffff;
-    background-color: #27272700;
-    border-radius: 10px;
 
-    box-shadow: 0 0 10px rgba(119, 119, 119, 0.591);  
-  }
+  max-width: 55vh;
+  min-height: 35vh;
+
+  padding: 1rem;
+  font-size: 14px;
+  font-weight: bold;
+  /* text-transform: uppercase; */
+  color: #ffffff;
+  background-color: #27272700;
+  border-radius: 10px;
+
+  box-shadow: 0 0 10px rgba(119, 119, 119, 0.591);  
+}
   
 p {
     margin-bottom: 0.8em;

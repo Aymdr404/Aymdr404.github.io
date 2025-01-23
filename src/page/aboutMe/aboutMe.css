@@ -1,7 +1,13 @@
 .aboutMe {
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
+    max-height: auto;
+
     width: 100%;
+    min-width: 35vh;
+
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     padding-left: 15%;
@@ -10,7 +16,9 @@
     background-color: rgba(59, 105, 183, 0.829);
 
     > section {
+        min-height: 50%;
         width: 50%;
+        min-width: 30vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -29,13 +37,29 @@
     }
 }
 
+.description {
+    font-size: 1.2em;
+    align-items: center;
+    img{
+        height: 20vh;
+        width: 20vh;
+    }
+}
+
 /*** Code css flèche ***/
 .arrow {
     position: absolute;
-    top: 95%;
+    top: 93%;
     left: 50%;
     transform: translate(-50%, -50%);
     cursor: pointer;
+}
+
+@media (max-width: 800px) {
+    .arrow span {
+        width: 0.5;
+        height: 0.5vh;
+    }
 }
 
 .arrow span {
