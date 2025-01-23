@@ -3,25 +3,6 @@ body {
 }
 
 /*------------------- CSS Accueil (pour grand écran) -------------------*/
-.arrondi {
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 4em;
-}
-
-.blob-acceuil {
-  position: absolute;
-  opacity: 0.5;
-  width: 400px; /* Taille par défaut pour PC */
-  aspect-ratio: 1/1;
-  animation: animate-background 10s cubic-bezier(0.66, -0.55, 0.27, 1.55) infinite alternate forwards;
-  filter: blur(40px);
-  z-index: -1;
-  background: linear-gradient(47deg, rgba(255, 88, 139, 1) 21%, rgb(0 164 173) 67%, rgba(118, 74, 166, 1) 81%);
-}
 
 .blob-corp-left, .blob-corp-right {
   position: absolute;
@@ -37,105 +18,17 @@ body {
   left: 65%;
 }
 
-/*** Code css flèche ***/
-.arrow {
-  position: absolute;
-  top: 92%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  cursor: pointer;
-}
-
-.arrow span {
-  display: block;
-  width: 1vw;
-  height: 1vw;
-  border-bottom: 5px solid white;
-  border-right: 5px solid white;
-  transform: rotate(45deg);
-  animation: animate-arrow 3s infinite;
-}
-
-.arrow span:nth-child(2) {
-  animation-delay: -0.2s;
-}
-
-.arrow span:nth-child(3) {
-  animation-delay: -0.4s;
-}
-
-@keyframes animate-arrow {
-  0% {
-    opacity: 0;
-    transform: rotate(45deg) translate(-20px, -20px);
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    transform: rotate(45deg) translate(20px, 20px);
-  }
-}
-
 .contenu {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 5%;
-  background-color: rgba(10, 10, 10, 0.829);
+  padding-left: 15%;
+  padding-right: 15%;
+  background-color: rgba(14, 22, 33, 0.829);
   width: 100%;
   min-height: 90vh;
   font-size: 1.2em;
 }
-
-.info {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.info_personnel, .info_professionnel {
-  max-width: 50%;
-  margin-top: 10%;
-  img {
-    height: 25vh;
-  }
-  
-  video {
-    height: 25vh;
-  }
-}
-
-.info_professionnel {
-  margin-left: 65%;
-}
-
-/* Styles pour les grands écrans (PC) */
-.info img, .info video {
-  object-fit: cover;
-  height: 25vh;
-}
-
-/* Styles pour PC */
-.project_detail {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(500px, 4fr));
-  grid-gap: 15px;
-  grid-auto-rows: minmax(180px, auto);
-  grid-auto-flow: dense;
-  padding: 1px;
-}
-
-.accordion {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;  
-  font-size: 1.2em;
-}
-
 
 /*------------------- Media Queries pour tablettes et petits PC -------------------*/
 @media (max-width: 1400px) {

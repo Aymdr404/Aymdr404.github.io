@@ -1,14 +1,21 @@
 import React from "react";
+import './aboutMe.css';
 
 const AboutMe: React.FC = () => {
   return (
     <div className="aboutMe">
-      <h1>About me</h1>
-      <video autoPlay muted loop id="myVideo">
-        <source src="./video/planet_jupiter.mp4" type="video/mp4" />
-      </video>
-      <div className="arrondi">
-        
+      <section className="presentation">
+        <h2>Bonjour je suis</h2>
+        <h1>Sabatier Aymeric</h1>
+        <h2>Un devéloppeur web fullstack de france</h2>
+      </section>
+      <section className="description">        
+        <p>Étant jeune diplômé du BUT informatique de l'UGA, je suis à la recherche d'emploi afin de gagner d'avantage d'expérience sur les technologies du web, qu'elles soient front-end ou back-end. Je suis une personne autonome mais j'aime aussi travailler en équipe.</p>
+      </section>
+      <div className="arrow">
+          <span></span>
+          <span></span>
+          <span></span>
       </div>
     </div>
   );

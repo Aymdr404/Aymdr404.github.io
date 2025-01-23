@@ -1,0 +1,20 @@
+.skillDescription {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: hsla(0, 0%, 53%, 0);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    min-width: 30vh;
+    max-width: 40vh;
+
+    color: #e7e7e7;
+}
+
+.skillDescription_title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
