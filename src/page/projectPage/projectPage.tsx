@@ -7,7 +7,7 @@ import Project from "../../components/project/project.tsx";
 const ProjectPage: React.FC = () => {
 return(
     <div className="projectPage">
-        <h2>Projets</h2>
+        <h1>Projets</h1>
         <p>Voici quelques projets que j'ai réalisés</p>
         <div className="project_detail">
             <Project title="Site aux enchères" technologies={['PHP', 'SQL', 'GIT']} description="Ce projet nous a permis de réaliser un site aux enchères. Accompagné d'une base de données en SQL"

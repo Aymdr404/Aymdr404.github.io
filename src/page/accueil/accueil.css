@@ -4,18 +4,8 @@ body {
 
 /*------------------- CSS Accueil (pour grand écran) -------------------*/
 
-.blob-corp-left, .blob-corp-right {
-  position: absolute;
-  opacity: 0.9;
-  width: 400px; /* Taille par défaut pour PC */
-  aspect-ratio: 1/1;
-  filter: blur(40px);
-  z-index: -1;
-  background: linear-gradient(47deg, rgb(183, 235, 135) 21%, rgb(236,228,171) 67%, rgb(245, 171, 129) 81%);
-}
-
-.blob-corp-right {
-  left: 65%;
+h1{
+  color: rgb(221, 114, 114);
 }
 
 .contenu {
