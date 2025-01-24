@@ -4,6 +4,7 @@ import Navbar from "../../components/navbar/navbar.tsx";
 import Acceuil from "../accueil/accueil.tsx";
 import { Route, Routes } from "react-router-dom";
 import LinkMe from "../../components/linkMe/linkMe.tsx";
+import LegalMention from "../legalMention/legalMention.tsx";
 
 const Home: React.FC = () => {
   return (
@@ -14,6 +15,7 @@ const Home: React.FC = () => {
       </header>
       <div className="footer">
         <LinkMe />
+        <LegalMention />
       </div>
     </div>
   );

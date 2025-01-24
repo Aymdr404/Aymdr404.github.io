@@ -1,7 +1,7 @@
 /* Style général pour le body */
 body {
     margin: 0 !important;
-    background-color: #000000;
+    background-color: rgba(14, 22, 33);
     font-family: Poppins, sans-serif !important;
 
     overflow-x: hidden;

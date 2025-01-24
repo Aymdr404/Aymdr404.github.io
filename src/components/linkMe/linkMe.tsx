@@ -17,7 +17,7 @@ const LinkMe: React.FC = () => {
             label: 'Linkedin',
             icon: 'pi pi-linkedin',
             command: () => {
-                window.open('https://www.linkedin.com/in/aymeric-sabatier-3a1b8b1b7/', '_blank');
+                window.open('www.linkedin.com/in/aymeric-sabatier-916613279', '_blank');
             }
         },
         {
