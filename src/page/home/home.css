@@ -2,7 +2,7 @@
 body {
     margin: 0 !important;
     background-color: rgba(14, 22, 33);
-    font-family: Poppins, sans-serif !important;
+    font-family: "Josefin Sans", serif !important;
 
     overflow-x: hidden;
 }
