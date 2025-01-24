@@ -8,4 +8,12 @@
     >* {
         margin: 2%;
     }
-  } 
+}
+
+.project_detail >* :hover{
+    
+    .project_detail{
+        background-color: aquamarine;
+    }
+
+}

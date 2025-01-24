@@ -2,18 +2,28 @@
   position: relative;
   max-width: 55vh;
   min-height: 35vh;
+  transform: scale(1);
+  transition: all 0.5s;
 
   padding: 1rem;
   font-size: 14px;
   font-weight: bold;
   /* text-transform: uppercase; */
   color: #ffffff;
-  background-color: #27272700;
+  background-color: #27272767;
   border-radius: 10px;
 
   box-shadow: 0 0 10px rgba(119, 119, 119, 0.591);  
 }
-  
+
+.projectbody:hover {
+  box-shadow: 0 0 20px rgba(119, 119, 119, 0.591);
+  transform: scale(1.10);
+  transition: all 0.5s;
+
+  background-color: #363535;
+}
+
 p {
     margin-bottom: 0.8em;
   }
