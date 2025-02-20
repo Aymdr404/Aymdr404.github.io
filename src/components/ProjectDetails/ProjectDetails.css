@@ -23,6 +23,11 @@
     max-height: 90vh;
 }
 
+.project-details a {
+    color: #f1f1f1;
+    text-decoration: none;
+}
+
 .close-button {
     position: absolute;
     top: 11px;
@@ -38,7 +43,6 @@
     align-items: center;
     justify-content: center;
     transition: all 0.3s;
-
 }
 
 .close-button:hover {
@@ -46,17 +50,16 @@
     transition: all 0.3s;
 }
 
-.img-container {
+.project-details .img-container {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
     margin-bottom: 20px;
 }
 
-.img-container img {
-    max-width: calc(33.333% - 10px);
-    flex: 1 1 auto;
-    height: auto;
+
+.project-details .img-container img {
+    width: 30%;
     border-radius: 8px;
 }
 

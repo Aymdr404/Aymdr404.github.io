@@ -9,9 +9,10 @@ interface ProjectProps {
     technologies: string[];
     img_description: string[];
     role: string;
+    url?: string;
 }
 
-const Project: React.FC<ProjectProps> = ({ title, description, technologies, img_description, role }) => {
+const Project: React.FC<ProjectProps> = ({ title, description, technologies, img_description, role, url='' }) => {
     const [showDetails, setShowDetails] = useState(false);
 
     const handleShowDetails = () => {
@@ -32,7 +33,7 @@ const Project: React.FC<ProjectProps> = ({ title, description, technologies, img
                 </div>
                 <button onClick={handleShowDetails} className="details-button">Voir plus</button>
             </div>
-            {showDetails && <ProjectDetails title={title} description={description} img={img_description} technologies={technologies} role={role} onClose={handleCloseDetails} />}
+            {showDetails && <ProjectDetails title={title} description={description} img={img_description} technologies={technologies} role={role} onClose={handleCloseDetails} url={url} />}
         </div>
     );
 }
