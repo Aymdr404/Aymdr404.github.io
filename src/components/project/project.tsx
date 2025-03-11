@@ -10,9 +10,10 @@ interface ProjectProps {
     img_description: string[];
     role: string;
     url?: string;
+    style?: React.CSSProperties;
 }
 
-const Project: React.FC<ProjectProps> = ({ title, description, technologies, img_description, role, url='' }) => {
+const Project: React.FC<ProjectProps> = ({ title, description, technologies, img_description, role, url='', style=undefined }) => {
     const [showDetails, setShowDetails] = useState(false);
 
     const handleShowDetails = () => {
@@ -24,7 +25,7 @@ const Project: React.FC<ProjectProps> = ({ title, description, technologies, img
     };
 
     return (
-        <div className="projectbody">
+        <div className="projectbody" style={style}>
             <h3 className="mb-4 text-2xl">{title}</h3>
             <div>
                 <p>{description}</p>

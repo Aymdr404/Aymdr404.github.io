@@ -18,7 +18,7 @@
 
 .projectbody:hover {
   box-shadow: 0 0 20px rgba(119, 119, 119, 0.591);
-  transform: scale(1.10);
+  transform: scale(1.05);
   transition: all 0.5s;
 
   background-color: #363535;
