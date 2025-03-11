@@ -11,7 +11,7 @@ return(
         <p>Voici quelques projets que j'ai réalisés</p>
         <div className="project_detail">
             <Project title="Site de recette de cuisine" technologies={['Typescript', 'Git', 'Firebase']} 
-                img_description={['projet_recette1.png', 'projet_recette2.png', 'projet_recette3.png']} role="Développeur" url="https://www.aymeric-sabatier.fr/Cuisine-artisanale/#/"
+                img_description={['projet_recette1.png', 'projet_recette2.png', 'projet_recette3.png']} role="Développeur" url="https://www.aymeric-sabatier.fr/Cuisine-artisanale"
                 description="Je suis convaincu que cuisiner doit être un plaisir quotidien. C’est pourquoi j’ai créé ce site pour vous aider à cuisiner des plats savoureux, équilibrés et adaptées à vos envies. De plus ce projet me permet de pratiquer mes compétences en développement web et en gestion de base dedonnées." />
 
             <Project title="Site aux enchères" technologies={['PHP', 'SQL', 'GIT']} description="Ce projet nous a permis de réaliser un site aux enchères. Accompagné d'une base de données en SQL"
