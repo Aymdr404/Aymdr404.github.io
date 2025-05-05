@@ -13,3 +13,12 @@
         background-color: aquamarine;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .project_detail {
+        display: flex;
+        flex-direction: column;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }    
+}

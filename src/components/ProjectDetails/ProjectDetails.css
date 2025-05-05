@@ -71,3 +71,18 @@
     display: flex;
     max-width: 20%;
 }
+
+@media screen and (max-width: 768px) {
+    .project-details {
+        width: 90%;
+        max-width: 100%;
+    }
+
+    .project-details .img-container img {
+        width: 100%;
+    }
+
+    .chips {
+        max-width: 100%;
+    }   
+}
