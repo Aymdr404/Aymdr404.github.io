@@ -12,32 +12,29 @@ import Contact from './pages/Contact/Contact.tsx';
 
 const App: React.FC = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [isVisible, setIsVisible] = useState(true);
+  const [isHovering, setIsHovering] = useState(false);
 
   useEffect(() => {
     const handleMouseMove = (event: MouseEvent) => {
-      requestAnimationFrame(() => {
-        setMousePosition({ x: event.clientX, y: event.clientY });
-      });
+      setMousePosition({ x: event.clientX, y: event.clientY });
     };
 
-    const handleVisibilityChange = () => {
-      setIsVisible(!document.hidden);
-    };
+    const handleMouseEnter = () => setIsHovering(true);
+    const handleMouseLeave = () => setIsHovering(false);
 
-    // Add event listeners
-    window.addEventListener('mousemove', handleMouseMove, { passive: true });
-    document.addEventListener('visibilitychange', handleVisibilityChange);
+    window.addEventListener('mousemove', handleMouseMove);
+    document.body.addEventListener('mouseenter', handleMouseEnter);
+    document.body.addEventListener('mouseleave', handleMouseLeave);
 
-    // Remove event listeners on cleanup
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
-      document.removeEventListener('visibilitychange', handleVisibilityChange);
+      document.body.removeEventListener('mouseenter', handleMouseEnter);
+      document.body.removeEventListener('mouseleave', handleMouseLeave);
     };
-  }, []); // Empty dependency array
+  }, []);
 
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <div className="app">
         <Navbar />
         <main className="main-content">
@@ -47,11 +44,12 @@ const App: React.FC = () => {
             <Route path="/skills" element={<Skills />} />
             <Route path="/experience" element={<Experience />} />
             <Route path="/projects" element={<Projects />} />
-            {<Route path="/contact" element={<Contact />} />}
+            <Route path="/contact" element={<Contact />} />
+            <Route path="*" element={<Navigate to="/home" replace />} />
           </Routes>
         </main>
         <div
-          className={`cursor-follower ${isVisible ? 'visible' : ''}`}
+          className={`cursor-follower ${isHovering ? 'visible' : ''}`}
           style={{
             left: `${mousePosition.x}px`,
             top: `${mousePosition.y}px`
