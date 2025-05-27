@@ -1,46 +1,64 @@
 import React, { useState, useEffect } from 'react';
-import Home from './page/home/home.tsx';
-import { PrimeReactProvider } from 'primereact/api';
-import "primereact/resources/themes/lara-light-indigo/theme.css";
-import 'primeicons/primeicons.css';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import './App.css';
+
+// Page imports
+import Navbar from './components/navbar/navbar.tsx';
+import Home from './pages/Home/Home.tsx';
+import Skills from './pages/Skills/Skills.tsx';
+import Experience from './pages/Experience/Experience.tsx';
+import Projects from './pages/Projects/Projects.tsx';
+import Contact from './pages/Contact/Contact.tsx';
 
 const App: React.FC = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
     const handleMouseMove = (event: MouseEvent) => {
-      setMousePosition({ x: event.pageX, y: event.pageY }); // Utilisation de pageX et pageY
+      requestAnimationFrame(() => {
+        setMousePosition({ x: event.clientX, y: event.clientY });
+      });
     };
 
-    window.addEventListener('mousemove', handleMouseMove);
+    const handleVisibilityChange = () => {
+      setIsVisible(!document.hidden);
+    };
+
+    // Add event listeners
+    window.addEventListener('mousemove', handleMouseMove, { passive: true });
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+
+    // Remove event listeners on cleanup
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
     };
-  }, []);
+  }, []); // Empty dependency array
 
   return (
-    <div className="App" style={{ position: 'relative' }}>
-      <header className="App-header">
-        <PrimeReactProvider>
-          <Home />
-        </PrimeReactProvider>
-      </header>
-      {/* Élement qui suit la souris */}
-      <div
-        style={{
-          position: 'absolute',
-          top: mousePosition.y,
-          left: mousePosition.x,
-          transform: 'translate(-50%, -50%)',
-          pointerEvents: 'none',
-          width: '30px',
-          height: '30px',
-          borderRadius: '50%',
-          border: '2px solid white',
-          zIndex: 1000
-        }}
-      />
-    </div>
+    <Router>
+      <div className="app">
+        <Navbar />
+        <main className="main-content">
+          <Routes>
+            <Route path="/" element={<Navigate to="/home" replace />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/skills" element={<Skills />} />
+            <Route path="/experience" element={<Experience />} />
+            <Route path="/projects" element={<Projects />} />
+            {<Route path="/contact" element={<Contact />} />}
+          </Routes>
+        </main>
+        <div
+          className={`cursor-follower ${isVisible ? 'visible' : ''}`}
+          style={{
+            left: `${mousePosition.x}px`,
+            top: `${mousePosition.y}px`
+          }}
+        />
+      </div>
+    </Router>
   );
 }
 

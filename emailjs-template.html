@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Form Submission</title>
+</head>
+<body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
+    <div style="max-width: 600px; margin: 0 auto; padding: 20px;">
+        <h2 style="color: #2563eb; margin-bottom: 20px;">Nouveau message depuis votre portfolio</h2>
+        
+        <div style="background-color: #f8fafc; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+            <p style="margin: 0;"><strong>Nom:</strong> {{name}}</p>
+            <p style="margin: 10px 0;"><strong>Email:</strong> {{email}}</p>
+            <p style="margin: 10px 0;"><strong>Sujet:</strong> {{subject}}</p>
+        </div>
+
+        <div style="background-color: #f8fafc; padding: 20px; border-radius: 8px;">
+            <h3 style="color: #2563eb; margin-top: 0;">Message:</h3>
+            <p style="white-space: pre-wrap;">{{message}}</p>
+        </div>
+
+        <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid #e2e8f0; font-size: 14px; color: #64748b;">
+            <p>Ce message a été envoyé depuis le formulaire de contact de votre portfolio.</p>
+        </div>
+    </div>
+</body>
+</html> 
