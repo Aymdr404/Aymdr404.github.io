@@ -147,14 +147,14 @@ const Contact: React.FC = () => {
               <i className="fas fa-envelope"></i>
               <div>
                 <h3>Email</h3>
-                <p>aymeric.sabatier@outlook.fr</p>
+                <p>ssabatieraymeric@gmail.com</p>
               </div>
             </div>
             <div className="contact-method">
               <i className="fas fa-phone"></i>
               <div>
                 <h3>Téléphone</h3>
-                <p>+33 6 XX XX XX XX</p>
+                <p>+33 7 68 08 83 25</p>
               </div>
             </div>
             <div className="contact-method">
