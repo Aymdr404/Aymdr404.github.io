@@ -13,42 +13,42 @@ interface TimelineEvent {
 const Experience: React.FC = () => {
   const experiences: TimelineEvent[] = [
     {
-      title: 'Full Stack Developer',
+      title: 'Développeur Full Stack',
       company: 'Absolut System',
-      period: 'December 2024 - March 2025',
-      description: 'Development of a React web interface and NodeJS API for controlling electronic hardware through ethernet.',
-      technologies: ['React', 'Node.js', 'TypeScript', 'Ethernet Communication'],
+      period: 'Décembre 2024 - Mars 2025',
+      description: 'Développement d\'une interface web React et d\'une API NodeJS pour le contrôle de matériel électronique via ethernet.',
+      technologies: ['React', 'Node.js', 'TypeScript', 'Communication Ethernet'],
       logo: 'logo_AbsolutSystem.png'
     },
     {
-      title: 'Backend Developer',
+      title: 'Développeur Backend',
       company: 'Objectif-Pi',
-      period: 'August 2023 - August 2024',
-      description: 'Backend development in Python, implementing client requests on our ERP system.',
-      technologies: ['Python', 'ERP', 'Database Management', 'API Development'],
+      period: 'Août 2023 - Août 2024',
+      description: 'Développement backend en Python, implémentation des demandes clients sur notre système ERP.',
+      technologies: ['Python', 'ERP', 'Gestion de Base de Données', 'Développement API'],
       logo: 'logo_OP.png'
     },
     {
-      title: 'Frontend Developer',
+      title: 'Développeur Frontend',
       company: 'Remedee-labs',
-      period: 'April 2023 - June 2023',
-      description: 'Development of a web application for customer account management using Angular.',
-      technologies: ['Angular', 'TypeScript', 'REST APIs', 'User Authentication'],
+      period: 'Avril 2023 - Juin 2023',
+      description: 'Développement d\'une application web pour la gestion des comptes clients avec Angular.',
+      technologies: ['Angular', 'TypeScript', 'APIs REST', 'Authentification Utilisateur'],
       logo: 'Logo_RemedeeLabs.png'
     },
     {
-      title: 'Computer Science Student',
+      title: 'Étudiant en Informatique',
       company: 'BUT Informatique',
-      period: 'September 2021 - July 2024',
-      description: 'Bachelor\'s degree in Computer Science with alternating work-study program at Objectif-Pi.',
-      technologies: ['Software Development', 'Computer Science', 'Web Technologies', 'Database Design'],
+      period: 'Septembre 2021 - Juillet 2024',
+      description: 'Bachelor Universitaire de Technologie en Informatique en alternance chez Objectif-Pi.',
+      technologies: ['Développement Logiciel', 'Informatique', 'Technologies Web', 'Conception de Base de Données'],
       logo: 'logo_BUT.png'
     }
   ];
 
   return (
     <div className="page-container experience-page">
-      <h1 className="section-title">Professional Journey</h1>
+      <h1 className="section-title">Parcours Professionnel</h1>
       
       <div className="timeline">
         {experiences.map((experience, index) => (

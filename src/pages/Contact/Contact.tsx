@@ -85,12 +85,12 @@ const Contact: React.FC = () => {
           message: ''
         });
       } else {
-        throw new Error('Failed to send email');
+        throw new Error('Échec de l\'envoi de l\'email');
       }
     } catch (error) {
-      console.error('Error sending email:', error);
+      console.error('Erreur lors de l\'envoi de l\'email:', error);
       setSubmitStatus('error');
-      setErrorMessage('Une erreur est survenue l\'envoi. Veuillez réessayer.');
+      setErrorMessage('Une erreur est survenue lors de l\'envoi. Veuillez réessayer.');
     } finally {
       setIsSubmitting(false);
     }
@@ -120,7 +120,7 @@ const Contact: React.FC = () => {
       
       <div className="contact-content">
         <div className="contact-info">
-          <h2>Let's Connect!</h2>
+          <h2>Prenons Contact !</h2>
           <p className="contact-description">
             Je suis toujours intéressé par de nouvelles opportunités. 
             N'hésitez pas à me contacter pour discuter de projets passionnants 

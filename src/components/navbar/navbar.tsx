@@ -17,10 +17,10 @@ const Navbar: React.FC = () => {
   }, []);
 
   const navItems = [
-    { path: '/home', label: 'Home' },
-    { path: '/skills', label: 'Skills' },
-    { path: '/experience', label: 'Experience' },
-    { path: '/projects', label: 'Projects' },
+    { path: '/home', label: 'Accueil' },
+    { path: '/skills', label: 'Compétences' },
+    { path: '/experience', label: 'Expérience' },
+    { path: '/projects', label: 'Projets' },
     { path: '/contact', label: 'Contact' },
   ];
 

@@ -155,49 +155,49 @@ const Projects: React.FC = () => {
   const [filter, setFilter] = useState<'all' | 'professional' | 'personal'>('all');
 
   const projects: Project[] = [
-    // Professional Projects
+    // Projets Professionnels
     {
       id: 1,
       title: "Interface de Contrôle Hardware",
       description: "Développement d'une interface web React et d'une API NodeJS permettant de contrôler une carte électronique via ethernet. L'interface permet la configuration et le monitoring en temps réel des paramètres de la carte.",
-      technologies: ["React", "Node.js", "TypeScript", "WebSocket", "Ethernet Communication", "Hardware Control"],
+      technologies: ["React", "Node.js", "TypeScript", "WebSocket", "Communication Ethernet", "Contrôle Hardware"],
       images: ["hardware-interface.png"],
-      role: "Full Stack Developer",
+      role: "Développeur Full Stack",
       type: "professional"
     },
     {
       id: 2,
       title: "Application de Gestion ERP",
       description: "Développement backend en Python pour un système ERP, implémentant des fonctionnalités de gestion des demandes clients. L'application permet le suivi des commandes, la gestion des stocks et l'automatisation des processus métier.",
-      technologies: ["Python", "ERP", "SQL", "API REST", "Business Process Automation"],
+      technologies: ["Python", "ERP", "SQL", "API REST", "Automatisation des Processus"],
       images: ["erp-system.jpeg"],
-      role: "Backend Developer",
+      role: "Développeur Backend",
       type: "professional"
     },
     {
       id: 3,
       title: "Web App Gestion de Comptes",
       description: "Développement d'une application web Angular pour la gestion des comptes clients. L'application permet aux utilisateurs de gérer leurs profils, suivre leurs activités et accéder à leurs services personnalisés.",
-      technologies: ["Angular", "TypeScript", "REST APIs", "User Authentication", "Material Design"],
+      technologies: ["Angular", "TypeScript", "APIs REST", "Authentification Utilisateur", "Material Design"],
       images: ["default-image.svg"],
-      role: "Frontend Developer",
+      role: "Développeur Frontend",
       type: "professional"
     },
-    // Personal Projects
+    // Projets Personnels
     {
       id: 4,
       title: "Portfolio Personnel",
       description: "Un site web portfolio moderne développé avec React et TypeScript, mettant en valeur mes compétences et expériences professionnelles. Le site présente une interface utilisateur élégante avec des animations fluides et un design responsive.",
-      technologies: ["React", "TypeScript", "CSS3", "React Router", "Responsive Design"],
+      technologies: ["React", "TypeScript", "CSS3", "React Router", "Design Responsive"],
       images: ["portfolio.png"],
-      role: "Full Stack Developer",
+      role: "Développeur Full Stack",
       type: "personal",
       github: "https://github.com/Aymdr404/Aymdr404.github.io"
     },
     {
       id: 5,
-      title: "Site de recette de cuisine",
-      description: "Je suis convaincu que cuisiner doit être un plaisir quotidien. C'est pourquoi j'ai créé ce site pour vous aider à cuisiner des plats savoureux, équilibrés et adaptées à vos envies. De plus ce projet me permet de pratiquer mes compétences en développement web et en gestion de base dedonnées.",
+      title: "Site de Recettes de Cuisine",
+      description: "Je suis convaincu que cuisiner doit être un plaisir quotidien. C'est pourquoi j'ai créé ce site pour vous aider à cuisiner des plats savoureux, équilibrés et adaptés à vos envies. De plus, ce projet me permet de pratiquer mes compétences en développement web et en gestion de base de données.",
       technologies: ["Typescript", "Git", "Firebase"],
       images: ["projet_recette1.png", "projet_recette2.png", "projet_recette3.png"],
       role: "Developer",

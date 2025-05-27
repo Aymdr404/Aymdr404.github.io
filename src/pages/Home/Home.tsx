@@ -6,17 +6,17 @@ const Home: React.FC = () => {
     <div className="home">
       <div className="home-content">
         <h1 className="title">
-          <span className="greeting">Hello, I'm</span>
+          <span className="greeting">Bonjour, je suis</span>
           <span className="name">Sabatier Aymeric</span>
         </h1>
-        <p className="subtitle">Full Stack Web Developer</p>
+        <p className="subtitle">Développeur Web Full Stack</p>
         <div className="description">
-          Passionate about creating beautiful and functional web applications.
-          I specialize in modern web technologies and love bringing ideas to life.
+          Passionné par la création d'applications web belles et fonctionnelles.
+          Je suis spécialisé dans les technologies web modernes et j'aime donner vie aux idées.
         </div>
         <div className="cta-buttons">
-          <a href="/projects" className="primary-button">View My Work</a>
-          <a href="/contact" className="secondary-button">Get In Touch</a>
+          <a href="/projects" className="primary-button">Voir Mes Projets</a>
+          <a href="/contact" className="secondary-button">Me Contacter</a>
         </div>
       </div>
     </div>

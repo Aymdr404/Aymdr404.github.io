@@ -31,7 +31,7 @@ const Skills: React.FC = () => {
       ],
     },
     {
-      category: 'Tools & Others',
+      category: 'Outils & Autres',
       items: [
         { name: 'Git', level: 85, icon: 'devicon-git-plain' },
         { name: 'Docker', level: 70, icon: 'devicon-docker-plain' },
@@ -43,7 +43,7 @@ const Skills: React.FC = () => {
 
   return (
     <div className="page-container skills-page">
-      <h1 className="section-title">Skills & Expertise</h1>
+      <h1 className="section-title">Compétences & Expertise</h1>
       
       <div className="skills-grid">
         {skills.map((skillCategory, index) => (
