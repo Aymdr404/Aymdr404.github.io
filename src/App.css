@@ -181,6 +181,10 @@ a, button {
   .page-container {
     padding: 1rem;
   }
+
+  .cursor-follower {
+    display: none;
+  }
 }
 
 /* Add smooth transitions for interactive elements */
