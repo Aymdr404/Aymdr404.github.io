@@ -9,6 +9,7 @@ import Skills from './pages/Skills/Skills.tsx';
 import Experience from './pages/Experience/Experience.tsx';
 import Projects from './pages/Projects/Projects.tsx';
 import Contact from './pages/Contact/Contact.tsx';
+import Freelance from './pages/Freelance/Freelance.tsx';
 
 const App: React.FC = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -44,6 +45,7 @@ const App: React.FC = () => {
             <Route path="/skills" element={<Skills />} />
             <Route path="/experience" element={<Experience />} />
             <Route path="/projects" element={<Projects />} />
+            <Route path='/freelance' element={<Freelance />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<Navigate to="/home" replace />} />
           </Routes>
