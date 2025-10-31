@@ -222,6 +222,15 @@ const Projects: React.FC = () => {
       images: ["demineur-1.png", "demineur-2.png", "demineur-3.png"],
       role: "Developer",
       type: "personal",
+    },
+    {
+      id: 8,
+      title: "Code Civile",
+      description: "Développement d'un site permettant de montrer un article du code civile par jour. Utilise une api poura récuperer cette article, puis génère une iage our le pubier sur twitter.",
+      technologies: ["Typescript", "Javascript"],
+      images: ["default-image.svg"],
+      role: "Developpeur",
+      type: "Personnal"
     }
   ];
 
