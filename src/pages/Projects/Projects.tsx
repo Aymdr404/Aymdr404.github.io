@@ -27,7 +27,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
     if (!isAutoPlaying || !project.images || project.images.length <= 1) return;
 
     const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => 
+      setCurrentImageIndex((prevIndex) =>
         prevIndex === project.images.length - 1 ? 0 : prevIndex + 1
       );
     }, 3000); // Change image every 3 seconds
@@ -38,7 +38,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
   const handlePrevImage = (e: React.MouseEvent) => {
     e.stopPropagation();
     setIsAutoPlaying(false);
-    setCurrentImageIndex((prevIndex) => 
+    setCurrentImageIndex((prevIndex) =>
       prevIndex === 0 ? project.images.length - 1 : prevIndex - 1
     );
   };
@@ -46,7 +46,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
   const handleNextImage = (e: React.MouseEvent) => {
     e.stopPropagation();
     setIsAutoPlaying(false);
-    setCurrentImageIndex((prevIndex) => 
+    setCurrentImageIndex((prevIndex) =>
       prevIndex === project.images.length - 1 ? 0 : prevIndex + 1
     );
   };
@@ -61,24 +61,24 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal-content" onClick={e => e.stopPropagation()}>
         <button className="modal-close" onClick={onClose}>&times;</button>
-        
+
         <div className="modal-image-container">
-          <img 
-            src={project.images && project.images.length > 0 
+          <img
+            src={project.images && project.images.length > 0
               ? process.env.PUBLIC_URL + '/img/' + project.images[currentImageIndex]
-              : process.env.PUBLIC_URL + '/img/default-image.svg'} 
+              : process.env.PUBLIC_URL + '/img/default-image.svg'}
             alt={project.title}
           />
           {project.images && project.images.length > 1 && (
             <>
-              <button 
+              <button
                 className="nav-arrow prev"
                 onClick={handlePrevImage}
                 aria-label="Previous image"
               >
                 <i className="fas fa-chevron-left"></i>
               </button>
-              <button 
+              <button
                 className="nav-arrow next"
                 onClick={handleNextImage}
                 aria-label="Next image"
@@ -94,7 +94,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
                     aria-label={`Go to image ${index + 1}`}
                   />
                 ))}
-                <button 
+                <button
                   className={`auto-play-toggle ${isAutoPlaying ? 'active' : ''}`}
                   onClick={(e) => {
                     e.stopPropagation();
@@ -113,7 +113,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
           <h2>{project.title}</h2>
           <p className="role">Role: {project.role}</p>
           <p className="description">{project.description}</p>
-          
+
           <div className="technologies">
             {project.technologies.map((tech, index) => (
               <span key={index} className="tech-tag">{tech}</span>
@@ -122,9 +122,9 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
 
           <div className="project-links">
             {(project.site || project.url) && (
-              <a 
-                href={project.site || project.url} 
-                target="_blank" 
+              <a
+                href={project.site || project.url}
+                target="_blank"
                 rel="noopener noreferrer"
                 className="project-link site-link"
                 onClick={(e) => e.stopPropagation()}
@@ -133,9 +133,9 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
               </a>
             )}
             {project.github && (
-              <a 
-                href={project.github} 
-                target="_blank" 
+              <a
+                href={project.github}
+                target="_blank"
                 rel="noopener noreferrer"
                 className="project-link github-link"
                 onClick={(e) => e.stopPropagation()}
@@ -230,32 +230,33 @@ const Projects: React.FC = () => {
       technologies: ["Typescript", "Javascript"],
       images: ["default-image.svg"],
       role: "Developpeur",
-      type: "Personnal"
+      type: "personal",
+	  site: "https://www.aymeric-sabatier.fr/daily-piraterie/",
     }
   ];
 
-  const filteredProjects = projects.filter(project => 
+  const filteredProjects = projects.filter(project =>
     filter === 'all' ? true : project.type === filter
   );
 
   return (
     <div className="page-container projects-page">
       <h1 className="section-title">Mes Projets</h1>
-      
+
       <div className="projects-filter">
-        <button 
+        <button
           className={`filter-btn ${filter === 'all' ? 'active' : ''}`}
           onClick={() => setFilter('all')}
         >
           Tous
         </button>
-        <button 
+        <button
           className={`filter-btn ${filter === 'professional' ? 'active' : ''}`}
           onClick={() => setFilter('professional')}
         >
           Professionnels
         </button>
-        <button 
+        <button
           className={`filter-btn ${filter === 'personal' ? 'active' : ''}`}
           onClick={() => setFilter('personal')}
         >
@@ -265,16 +266,16 @@ const Projects: React.FC = () => {
 
       <div className="projects-grid">
         {filteredProjects.map(project => (
-          <div 
-            key={project.id} 
+          <div
+            key={project.id}
             className={`project-card card ${project.type}`}
             onClick={() => setSelectedProject(project)}
           >
             <div className="project-image">
-              <img 
+              <img
                 src={project.images && project.images.length > 0
                   ? process.env.PUBLIC_URL + '/img/' + project.images[0]
-                  : process.env.PUBLIC_URL + '/img/default-image.svg'} 
+                  : process.env.PUBLIC_URL + '/img/default-image.svg'}
                 alt={project.title}
               />
               <div className="project-type-badge">
@@ -283,7 +284,7 @@ const Projects: React.FC = () => {
               {project.type === 'personal' && (project.site || project.github) && (
                 <div className="project-links-overlay">
                   {project.site && (
-                    <a 
+                    <a
                       href={project.site}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -294,7 +295,7 @@ const Projects: React.FC = () => {
                     </a>
                   )}
                   {project.github && (
-                    <a 
+                    <a
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -324,13 +325,13 @@ const Projects: React.FC = () => {
       </div>
 
       {selectedProject && (
-        <ProjectModal 
-          project={selectedProject} 
-          onClose={() => setSelectedProject(null)} 
+        <ProjectModal
+          project={selectedProject}
+          onClose={() => setSelectedProject(null)}
         />
       )}
     </div>
   );
 };
 
-export default Projects; 
+export default Projects;
