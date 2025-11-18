@@ -157,7 +157,16 @@ const Projects: React.FC = () => {
   const projects: Project[] = [
     // Projets Professionnels
     {
-      id: 1,
+      id: 9,
+      title: "Site de ventes marketplace",
+      description: "Amélioration d'un site de vente marketplace. L'application permet aux revendeurs de suivre leur flux de produit, les commande de leur clients, mais aussi les retours demandés.",
+      technologies: ["PHP", "SQL", "API", "Relation client"],
+      images: ["spartoo_site.png"],
+      role: "Développeur backend",
+      type: "professional"
+    },
+    {
+      id: 3,
       title: "Interface de Contrôle Hardware",
       description: "Développement d'une interface web React et d'une API NodeJS permettant de contrôler une carte électronique via ethernet. L'interface permet la configuration et le monitoring en temps réel des paramètres de la carte.",
       technologies: ["React", "Node.js", "TypeScript", "WebSocket", "Communication Ethernet", "Contrôle Hardware"],
@@ -175,21 +184,12 @@ const Projects: React.FC = () => {
       type: "professional"
     },
     {
-      id: 3,
+      id: 1,
       title: "Web App Gestion de Comptes",
       description: "Développement d'une application web Angular pour la gestion des comptes clients. L'application permet aux utilisateurs de gérer leurs profils, suivre leurs activités et accéder à leurs services personnalisés.",
       technologies: ["Angular", "TypeScript", "APIs REST", "Authentification Utilisateur", "Material Design"],
       images: ["default-image.svg"],
       role: "Développeur Frontend",
-      type: "professional"
-    },
-    {
-      id: 9,
-      title: "Site de ventes marketplace",
-      description: "Amélioration d'un site de vente marketplace. L'application permet aux revendeurs de suivre leur flux de produit, les commande de leur clients, mais aussi les retours demandés.",
-      technologies: ["PHP", "SQL", "API", "Relation client"],
-      images: ["spartoo_site.png"],
-      role: "Développeur backend",
       type: "professional"
     },
     // Projets Personnels
