@@ -28,7 +28,8 @@ const Experience: React.FC = () => {
     }, []);
 
     const events: TimelineEvent[] = [
-        {status: 'Absolut system', date: 'Décembre 2024 => Mars 2025', color: '#FFC107', image: 'logo_AbsolutSystem.png', info:"Développeur fullstack web. Réalisation d\'une IHM en React et d'une API en nodeJs permettant de contrôler une carte éléctronique à travers l'ethernet." },
+        { status: 'Spartoo', date:'Septembre 2025 => Maintenant', color:'#ff1707ff', image:'logo-spartoo.png', info:'Développeur web PHP. Développement des applications interne utilisé par nos revendeurs' },
+        { status: 'Absolut system', date: 'Décembre 2024 => Mars 2025', color: '#FFC107', image: 'logo_AbsolutSystem.png', info:"Développeur fullstack web. Réalisation d\'une IHM en React et d'une API en nodeJs permettant de contrôler une carte éléctronique à travers l'ethernet." },
         { status: 'Objectif-Pi', date: 'Août 2023 => Août 2024', color: '#9C27B0', image: 'logo_OP.png', info:'Développeur backend python en alternance. Réalisation de demande client sur notre ERP.' },
         { status: 'Remedee-labs', date: 'Avril 2023 => Juin 2023', color: '#673AB7', image:'Logo_RemedeeLabs.png', info:'Developpeur frontend Angular. Réalisation d\'une application web app de gestion de compte client.' },
         { status: 'BUT informatique', date: 'Septembre 2021 => Juillet 2024', color: '#FF9800', image:'logo_BUT.png', info:'Formation en alternance chez Objectif-Pi' }
