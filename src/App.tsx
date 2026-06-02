@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import './App.css';
 
 // Page imports
@@ -14,6 +13,7 @@ import Freelance from './pages/Freelance/Freelance.tsx';
 const App: React.FC = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
+  const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
     const handleMouseMove = (event: MouseEvent) => {
@@ -34,31 +34,73 @@ const App: React.FC = () => {
     };
   }, []);
 
+  useEffect(() => {
+    let rafId = 0;
+
+    const handleScroll = () => {
+      if (rafId) return;
+      rafId = window.requestAnimationFrame(() => {
+        setScrollY(window.scrollY);
+        rafId = 0;
+      });
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+
+    return () => {
+      if (rafId) {
+        window.cancelAnimationFrame(rafId);
+      }
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <Router basename={process.env.PUBLIC_URL}>
-      <div className="app">
-        <Navbar />
-        <main className="main-content">
-          <Routes>
-            <Route path="/" element={<Navigate to="/home" replace />} />
-            <Route path="/home" element={<Home />} />
-            <Route path="/skills" element={<Skills />} />
-            <Route path="/experience" element={<Experience />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path='/freelance' element={<Freelance />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="*" element={<Navigate to="/home" replace />} />
-          </Routes>
-        </main>
+    <div className="app">
+      <Navbar />
+      <div className="global-parallax-bg" aria-hidden="true">
         <div
-          className={`cursor-follower ${isHovering ? 'visible' : ''}`}
-          style={{
-            left: `${mousePosition.x}px`,
-            top: `${mousePosition.y}px`
-          }}
+          className="bg-layer bg-layer-1"
+          style={{ transform: `translate3d(0, ${scrollY * 0.12}px, 0)` }}
+        />
+        <div
+          className="bg-layer bg-layer-2"
+          style={{ transform: `translate3d(0, ${scrollY * -0.18}px, 0)` }}
+        />
+        <div
+          className="bg-layer bg-layer-3"
+          style={{ transform: `translate3d(0, ${scrollY * 0.28}px, 0)` }}
         />
       </div>
-    </Router>
+      <main className="main-content">
+        <section id="home" className="scroll-section onepage-section">
+          <Home />
+        </section>
+        <section id="skills" className="scroll-section onepage-section">
+          <Skills />
+        </section>
+        <section id="experience" className="scroll-section onepage-section">
+          <Experience />
+        </section>
+        <section id="projects" className="scroll-section onepage-section">
+          <Projects />
+        </section>
+        <section id="freelance" className="scroll-section onepage-section">
+          <Freelance />
+        </section>
+        <section id="contact" className="scroll-section onepage-section">
+          <Contact />
+        </section>
+      </main>
+      <div
+        className={`cursor-follower ${isHovering ? 'visible' : ''}`}
+        style={{
+          left: `${mousePosition.x}px`,
+          top: `${mousePosition.y}px`
+        }}
+      />
+    </div>
   );
 }
 

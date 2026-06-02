@@ -241,7 +241,18 @@ const Projects: React.FC = () => {
 
   return (
     <div className="page-container projects-page">
-      <h1 className="section-title">Mes Projets</h1>
+      <section className="projects-hero">
+        <div className="projects-hero-layer projects-hero-bg">
+          <div className="hero-shape hero-shape-left" />
+          <div className="hero-shape hero-shape-right" />
+        </div>
+        <div className="projects-hero-layer projects-hero-title">
+          <h1 className="section-title">Mes Projets</h1>
+          <p className="projects-hero-subtitle">
+            Une selection de projets professionnels et personnels.
+          </p>
+        </div>
+      </section>
 
       <div className="projects-filter">
         <button
@@ -264,64 +275,66 @@ const Projects: React.FC = () => {
         </button>
       </div>
 
-      <div className="projects-grid">
-        {filteredProjects.map(project => (
-          <div
-            key={project.id}
-            className={`project-card card ${project.type}`}
-            onClick={() => setSelectedProject(project)}
-          >
-            <div className="project-image">
-              <img
-                src={project.images && project.images.length > 0
-                  ? process.env.PUBLIC_URL + '/img/' + project.images[0]
-                  : process.env.PUBLIC_URL + '/img/default-image.svg'}
-                alt={project.title}
-              />
-              <div className="project-type-badge">
-                {project.type === 'professional' ? 'Pro' : 'Perso'}
-              </div>
-              {project.type === 'personal' && (project.site || project.github) && (
-                <div className="project-links-overlay">
-                  {project.site && (
-                    <a
-                      href={project.site}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      onClick={(e) => e.stopPropagation()}
-                      className="quick-link site-link"
-                    >
-                      <i className="fas fa-globe"></i>
-                    </a>
-                  )}
-                  {project.github && (
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      onClick={(e) => e.stopPropagation()}
-                      className="quick-link github-link"
-                    >
-                      <i className="fab fa-github"></i>
-                    </a>
-                  )}
+      <div className="projects-grid-parallax">
+        <div className="projects-grid">
+          {filteredProjects.map(project => (
+            <div
+              key={project.id}
+              className={`project-card card ${project.type}`}
+              onClick={() => setSelectedProject(project)}
+            >
+              <div className="project-image">
+                <img
+                  src={project.images && project.images.length > 0
+                    ? process.env.PUBLIC_URL + '/img/' + project.images[0]
+                    : process.env.PUBLIC_URL + '/img/default-image.svg'}
+                  alt={project.title}
+                />
+                <div className="project-type-badge">
+                  {project.type === 'professional' ? 'Pro' : 'Perso'}
                 </div>
-              )}
-            </div>
-            <div className="project-info">
-              <h3>{project.title}</h3>
-              <p>{project.description}</p>
-              <div className="technologies">
-                {project.technologies.slice(0, 3).map((tech, index) => (
-                  <span key={index} className="tech-tag">{tech}</span>
-                ))}
-                {project.technologies.length > 3 && (
-                  <span className="tech-tag">+{project.technologies.length - 3}</span>
+                {project.type === 'personal' && (project.site || project.github) && (
+                  <div className="project-links-overlay">
+                    {project.site && (
+                      <a
+                        href={project.site}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={(e) => e.stopPropagation()}
+                        className="quick-link site-link"
+                      >
+                        <i className="fas fa-globe"></i>
+                      </a>
+                    )}
+                    {project.github && (
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={(e) => e.stopPropagation()}
+                        className="quick-link github-link"
+                      >
+                        <i className="fab fa-github"></i>
+                      </a>
+                    )}
+                  </div>
                 )}
               </div>
+              <div className="project-info">
+                <h3>{project.title}</h3>
+                <p>{project.description}</p>
+                <div className="technologies">
+                  {project.technologies.slice(0, 3).map((tech, index) => (
+                    <span key={index} className="tech-tag">{tech}</span>
+                  ))}
+                  {project.technologies.length > 3 && (
+                    <span className="tech-tag">+{project.technologies.length - 3}</span>
+                  )}
+                </div>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
 
       {selectedProject && (

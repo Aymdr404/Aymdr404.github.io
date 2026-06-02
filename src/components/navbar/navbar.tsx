@@ -1,36 +1,47 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
 import './navbar.css';
 
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const location = useLocation();
+  const [activeSection, setActiveSection] = useState('home');
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
+
+      const sectionIds = ['home', 'skills', 'experience', 'projects', 'freelance', 'contact'];
+      const navOffset = 120;
+
+      for (let i = sectionIds.length - 1; i >= 0; i -= 1) {
+        const section = document.getElementById(sectionIds[i]);
+        if (section && window.scrollY + navOffset >= section.offsetTop) {
+          setActiveSection(sectionIds[i]);
+          break;
+        }
+      }
     };
 
     window.addEventListener('scroll', handleScroll);
+    handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const navItems = [
-    { path: '/home', label: 'Accueil' },
-    { path: '/skills', label: 'Compétences' },
-    { path: '/experience', label: 'Expérience' },
-    { path: '/projects', label: 'Projets' },
-    { path: '/freelance', label: 'Services' },
-    { path: '/contact', label: 'Contact' },
+    { id: 'home', label: 'Accueil' },
+    { id: 'skills', label: 'Compétences' },
+    { id: 'experience', label: 'Expérience' },
+    { id: 'projects', label: 'Projets' },
+    { id: 'freelance', label: 'Services' },
+    { id: 'contact', label: 'Contact' },
   ];
 
   return (
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="nav-content">
-        <Link to="/home" className="logo">
+        <a href="#home" className="logo" onClick={() => setIsMobileMenuOpen(false)}>
           Portfolio
-        </Link>
+        </a>
 
         <button 
           className={`mobile-menu-button ${isMobileMenuOpen ? 'active' : ''}`}
@@ -44,14 +55,14 @@ const Navbar: React.FC = () => {
 
         <div className={`nav-links ${isMobileMenuOpen ? 'active' : ''}`}>
           {navItems.map((item) => (
-            <Link
-              key={item.path}
-              to={item.path}
-              className={`nav-link ${location.pathname === item.path ? 'active' : ''}`}
+            <a
+              key={item.id}
+              href={`#${item.id}`}
+              className={`nav-link ${activeSection === item.id ? 'active' : ''}`}
               onClick={() => setIsMobileMenuOpen(false)}
             >
               {item.label}
-            </Link>
+            </a>
           ))}
         </div>
       </div>

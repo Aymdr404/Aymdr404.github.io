@@ -1,6 +1,5 @@
 import React from 'react';
 import './Freelance.css';
-import { Link } from 'react-router-dom';
 
 const services = [
   {
@@ -87,7 +86,7 @@ const Freelance: React.FC = () => {
                   <li key={i}>{point}</li>
                 ))}
               </ul>
-              <Link to="/contact" className="primary-button service-cta">Demander un devis</Link>
+              <a href="#contact" className="primary-button service-cta">Demander un devis</a>
             </div>
           );
         })}
