@@ -111,7 +111,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
 
         <div className="modal-info">
           <h2>{project.title}</h2>
-          <p className="role">Role: {project.role}</p>
+          <p className="role">Rôle : {project.role}</p>
           <p className="description">{project.description}</p>
 
           <div className="technologies">
@@ -159,7 +159,7 @@ const Projects: React.FC = () => {
     {
       id: 9,
       title: "Site de ventes marketplace",
-      description: "Amélioration d'un site de vente marketplace. L'application permet aux revendeurs de suivre leur flux de produit, les commande de leur clients, mais aussi les retours demandés.",
+      description: "Amélioration d'un site de vente marketplace. L'application permet aux revendeurs de suivre leur flux de produit, les commandes de leurs clients, mais aussi les retours demandés.",
       technologies: ["PHP", "SQL", "API", "Relation client"],
       images: ["spartoo_site.png"],
       role: "Développeur backend",
@@ -207,9 +207,9 @@ const Projects: React.FC = () => {
       id: 5,
       title: "Site de Recettes de Cuisine",
       description: "Je suis convaincu que cuisiner doit être un plaisir quotidien. C'est pourquoi j'ai créé ce site pour vous aider à cuisiner des plats savoureux, équilibrés et adaptés à vos envies. De plus, ce projet me permet de pratiquer mes compétences en développement web et en gestion de base de données.",
-      technologies: ["Typescript", "Git", "Firebase"],
+      technologies: ["TypeScript", "Git", "Firebase"],
       images: ["projet_recette1.png", "projet_recette2.png", "projet_recette3.png"],
-      role: "Developer",
+      role: "Développeur",
       type: "personal",
       github: "https://github.com/Aymdr404/Cuisine-artisanale",
       site: "https://www.aymeric-sabatier.fr/Cuisine-artisanale"
@@ -220,27 +220,27 @@ const Projects: React.FC = () => {
       description: "A l'occasion d'une GameJam organisée par l'IUT 2 Informatique de Grenoble, nous avons développé en groupe de 4, un jeu sur le thème d'un robot et de la gravité. Dans ce jeu, il va falloir survivre 60 secondes sous différentes gravités afin de récupérer des pièces pour réparer son vaisseau. Ce jeu a été réalisé à l'aide de la librairie python pygame.",
       technologies: ["Python", "Git", "Pygame"],
       images: ["blackholebot-1.png"],
-      role: "Game Developer",
+      role: "Développeur jeu",
       type: "personal",
     },
     {
       id: 7,
       title: "Démineur",
-      description: "Développement d'un démineur en Python, permettant de jouer contre l'ordinateur.",
+      description: "Développement d'un jeu de démineur en Python.",
       technologies: ["Python", "Git"],
       images: ["demineur-1.png", "demineur-2.png", "demineur-3.png"],
-      role: "Developer",
+      role: "Développeur",
       type: "personal",
     },
     {
       id: 8,
-      title: "Code Civile",
-      description: "Développement d'un site permettant de montrer un article du code civile par jour. Utilise une api poura récuperer cette article, puis génère une iage our le pubier sur twitter.",
-      technologies: ["Typescript", "Javascript"],
+      title: "Code Civil",
+      description: "Développement d'un site affichant un article du Code civil par jour. L'article est récupéré via une API, puis une image est générée pour le publier sur Twitter.",
+      technologies: ["TypeScript", "JavaScript"],
       images: ["default-image.svg"],
-      role: "Developpeur",
+      role: "Développeur",
       type: "personal",
-	  site: "https://www.aymeric-sabatier.fr/daily-piraterie/",
+      site: "https://www.aymeric-sabatier.fr/daily-piraterie/",
     }
   ];
 

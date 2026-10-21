@@ -99,7 +99,7 @@ const Contact: React.FC = () => {
   const socialLinks = [
     {
       name: 'LinkedIn',
-      url: 'https://www.linkedin.com/in/aymeric-sabatier-6b1270251/',
+      url: 'https://www.linkedin.com/in/aymeric-sabatier-916613279',
       icon: 'fab fa-linkedin'
     },
     {
@@ -109,7 +109,7 @@ const Contact: React.FC = () => {
     },
     {
       name: 'Email',
-      url: 'mailto:aymeric.sabatier@outlook.fr',
+      url: 'mailto:ssabatieraymeric@gmail.com',
       icon: 'fas fa-envelope'
     }
   ];

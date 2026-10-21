@@ -14,8 +14,8 @@ const Experience: React.FC = () => {
   const experiences: TimelineEvent[] = [
     { title: 'Développeur web PHP', 
       company: 'Spartoo',
-      period: 'Septembre 2025 => Maintenant', 
-      description: 'Développeur web PHP. Développement des applications interne utilisé par nos revendeurs',
+      period: "Septembre 2025 - Aujourd'hui", 
+      description: 'Développement des applications internes utilisées par nos revendeurs.',
       technologies: ['PHP', 'SQL', 'Relation client', 'API'],
       logo: 'logo_spartoo.png', 
     },

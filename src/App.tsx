@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import './App.css';
 
@@ -12,12 +12,17 @@ import Contact from './pages/Contact/Contact.tsx';
 import Freelance from './pages/Freelance/Freelance.tsx';
 
 const App: React.FC = () => {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  // Position written directly to the DOM so mouse moves don't re-render the whole app
+  const cursorRef = useRef<HTMLDivElement>(null);
   const [isHovering, setIsHovering] = useState(false);
 
   useEffect(() => {
     const handleMouseMove = (event: MouseEvent) => {
-      setMousePosition({ x: event.clientX, y: event.clientY });
+      if (cursorRef.current) {
+        cursorRef.current.style.left = `${event.clientX}px`;
+        cursorRef.current.style.top = `${event.clientY}px`;
+      }
+      setIsHovering(true);
     };
 
     const handleMouseEnter = () => setIsHovering(true);
@@ -51,11 +56,8 @@ const App: React.FC = () => {
           </Routes>
         </main>
         <div
+          ref={cursorRef}
           className={`cursor-follower ${isHovering ? 'visible' : ''}`}
-          style={{
-            left: `${mousePosition.x}px`,
-            top: `${mousePosition.y}px`
-          }}
         />
       </div>
     </Router>

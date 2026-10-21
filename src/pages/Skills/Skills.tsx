@@ -16,6 +16,7 @@ const skillsByLevel = [
     level: 'Avancé',
     className: 'advanced',
     items: [
+      { name: 'PHP', icon: 'devicon-php-plain' },
       { name: 'Node.js', icon: 'devicon-nodejs-plain' },
       { name: 'Python', icon: 'devicon-python-plain' },
       { name: 'Git', icon: 'devicon-git-plain' },
@@ -32,12 +33,6 @@ const skillsByLevel = [
       { name: 'MongoDB', icon: 'devicon-mongodb-plain' },
     ],
   },
-  // Ajoute une section Découverte si tu veux
-  // {
-  //   level: 'Découverte',
-  //   className: 'beginner',
-  //   items: [ ... ]
-  // },
 ];
 
 const Skills: React.FC = () => {
@@ -45,7 +40,7 @@ const Skills: React.FC = () => {
     <div className="page-container skills-page">
       <h1 className="section-title">Compétences & Expertise</h1>
       <div className="skills-levels">
-        {skillsByLevel.map((group, idx) => (
+        {skillsByLevel.map((group) => (
           <div key={group.level} className={`skills-level-group ${group.className}`}>
             <h2 className={`skills-level-title ${group.className}`}>{group.level}</h2>
             <div className="skills-badges">
