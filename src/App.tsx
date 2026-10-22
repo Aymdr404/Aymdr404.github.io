@@ -19,8 +19,9 @@ const App: React.FC = () => {
   useEffect(() => {
     const handleMouseMove = (event: MouseEvent) => {
       if (cursorRef.current) {
-        cursorRef.current.style.left = `${event.clientX}px`;
-        cursorRef.current.style.top = `${event.clientY}px`;
+        // transform is handled by the compositor: no layout recalculation on each move
+        cursorRef.current.style.transform =
+          `translate3d(${event.clientX}px, ${event.clientY}px, 0) translate(-50%, -50%)`;
       }
       setIsHovering(true);
     };

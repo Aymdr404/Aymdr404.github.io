@@ -87,7 +87,7 @@ body {
   transform: translate(-50%, -50%);
   left: 0;
   top: 0;
-  will-change: transform, left, top;
+  will-change: transform;
   transition: opacity 0.3s ease;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
